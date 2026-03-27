@@ -6,8 +6,12 @@ import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
+  metadataBase: new URL('https://sns-garden.com'),
   title: 'Threads Garden — 맞팔 분석기 | Unfollow Finder',
   description: '팔로워와 팔로잉을 비교해 맞팔하지 않는 계정을 찾아드립니다. Find Threads accounts that don\'t follow you back.',
+  verification: {
+    google: 'M1PA4SnZ2UMduDf15aSlzAHEzNLf6MAD1fuzO6dzhhI',
+  },
 };
 
 export default function RootLayout({ children }) {
