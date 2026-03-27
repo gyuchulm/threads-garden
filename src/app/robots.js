@@ -2,11 +2,17 @@ export const dynamic = 'force-static';
 
 export default function robots() {
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: '/private/',
-    },
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: '/private/',
+      },
+      {
+        userAgent: 'Mediapartners-Google',
+        allow: '/',
+      },
+    ],
     sitemap: 'https://sns-garden.com/sitemap.xml',
   };
 }

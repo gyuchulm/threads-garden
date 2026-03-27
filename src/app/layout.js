@@ -19,6 +19,9 @@ export const metadata = {
       'en-US': 'https://sns-garden.com/en', // Assuming we might add /en later, but for now we'll just map both.
     },
   },
+  other: {
+    'google-adsense-account': 'ca-pub-4103420208538428',
+  },
 };
 
 export default function RootLayout({ children }) {
