@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 import { useLang } from '@/context/LangContext';
 import { usePlatform } from '@/context/PlatformContext';
+import { posts } from '@/data/posts';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 
@@ -286,13 +287,43 @@ export default function Home() {
           </div>
         )}
 
-        {/* ── Tips Teaser ── */}
-        <section className="blog-teaser">
-          <div className="blog-teaser-header">
-            <h2>{t.tipsTeaser.title}</h2>
-            <Link href="/tips" className="blog-see-all">{t.tipsTeaser.cta}</Link>
+        {/* ── Recent Tips Grid ── */}
+        <section className="home-tips-section">
+          <div className="section-header">
+            <h2>{lang === 'ko' ? '정원 가꾸기 팁' : 'Gardening Tips'}</h2>
+            <p className="section-subtitle">
+              {lang === 'ko' 
+                ? '팔로워 관리부터 알고리즘 공략까지, 전문가의 인사이트를 만나보세요.' 
+                : 'From follower management to algorithm hacks, explore expert insights.'}
+            </p>
           </div>
-          <p className="blog-teaser-sub">{t.tipsTeaser.sub}</p>
+
+          <div className="tips-grid">
+            {posts.slice(0, 6).map((post) => (
+              <Link key={post.slug} href={`/tips/${post.slug}`} className="tip-card-link">
+                <article className="home-tip-card">
+                  <div className="tip-meta-badges">
+                    <span className={`platform-tag tag-${post.platform}`}>
+                      {post.platform === 'general' ? 'COMMON' : post.platform.toUpperCase()}
+                    </span>
+                    <span className="tip-category">{lang === 'ko' ? post.ko.category : post.en.category}</span>
+                  </div>
+                  <h3 className="tip-title">{lang === 'ko' ? post.ko.title : post.en.title}</h3>
+                  <p className="tip-desc">{lang === 'ko' ? post.ko.description : post.en.description}</p>
+                  <div className="tip-footer">
+                    <span className="tip-date">{post.date}</span>
+                    <span className="tip-more">{lang === 'ko' ? '자세히 보기 →' : 'Read More →'}</span>
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
+
+          <div className="section-footer">
+            <Link href="/tips" className="btn-secondary">
+              {lang === 'ko' ? '모든 팁 보기' : 'View All Tips'}
+            </Link>
+          </div>
         </section>
 
         <Footer />
