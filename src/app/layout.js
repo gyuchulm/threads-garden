@@ -30,6 +30,13 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#f8f7f4" />
       </head>
       <body>
+        {/* Google AdSense Verification */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4103420208538428"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <LangProvider>
           <PlatformProvider>
             <Nav />
