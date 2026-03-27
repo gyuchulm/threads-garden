@@ -31,15 +31,14 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="theme-color" content="#f8f7f4" />
-      </head>
-      <body>
-        {/* Google AdSense Verification */}
-        <Script
+        {/* AdSense Verification - Plain HTML Tag to avoid NEXT.js attributes */}
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4103420208538428"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        ></script>
+      </head>
+      <body>
         <LangProvider>
           <PlatformProvider>
             <Nav />
