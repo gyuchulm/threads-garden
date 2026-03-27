@@ -9,206 +9,327 @@ export const posts = [
     slug: 'threads-unfollow-guide',
     ko: {
       title: 'Threads 언팔로우 관리: 정원 가꾸기의 첫 단계',
-      description: '단순히 숫자만 줄이는 것이 아닙니다. 내 피드의 품질을 높이고 진짜 소통을 시작하기 위한 팔로잉 목록 정리 가이드입니다.',
+      description: '단순히 숫자만 줄이는 것이 아닙니다. 내 피드의 품질을 높이고 진짜 소통을 시작하기 위한 팔로잉 목록 정리 완벽 가이드입니다.',
       category: '가이드',
-      content: `
-## 보이지 않는 알고리즘의 눈
+      content: `## 보이지 않는 알고리즘의 눈
 
-Threads에서 여러분이 누구를 팔로우하는지는 단순한 목록 이상의 의미를 갖습니다. 알고리즘은 여러분이 팔로우하는 계정들의 활동과 성격을 분석하여 여러분의 피드를 구성합니다. 만약 맞팔하지도 않고 활동도 없는 '유령 계정'들이 여러분의 팔로잉 목록을 차지하고 있다면, 여러분의 디지털 정원은 잡초로 가득 찬 상태와 같습니다.
+Threads에서 여러분이 누구를 팔로우하는지는 단순한 목록 이상의 의미를 갖습니다. 알고리즘은 여러분이 팔로우하는 계정들의 활동 패턴, 게시 빈도, 그리고 그 계정들과의 상호작용 기록을 분석하여 피드를 구성합니다. 맞팔하지도 않고 활동도 없는 유령 계정들이 팔로잉 목록을 채우고 있다면, 여러분의 디지털 정원은 잡초로 가득 찬 묵은 밭과 다를 바 없습니다.
+
+특히 주목해야 할 점은 알고리즘이 '비활성 관계'를 감지한다는 것입니다. 내가 팔로우하고 있지만 한 번도 댓글을 달거나 좋아요를 주고받은 적 없는 계정이 많을수록, 알고리즘은 내 계정을 덜 '살아있는' 네트워크로 판단하여 새 게시물의 배포 범위를 줄입니다.
 
 ## 왜 지금 정리가 필요한가?
 
-많은 사람들이 팔로워 숫자에 집착하지만, 실제로는 팔로잉 목록의 정리가 계정 성장의 핵심입니다. 
-첫째, 피드 품질이 개선됩니다. 내가 보고 싶은 정보들이 더 자주 노출되게 됩니다. 
-둘째, 상호작용 지수가 높아집니다. 실제로 소통할 의지가 있는 사람들에게 내 글이 전달될 확률이 높아지기 때문입니다. 
-셋째, 계정의 신뢰도입니다. 팔로워는 100명인데 팔로잉이 5,000명인 계정은 스팸 계정으로 오해받기 쉽습니다.
+많은 사람들이 팔로워 숫자에 집착하지만, 실제로는 팔로잉 목록의 정리가 계정 성장의 핵심 레버입니다.
+
+첫째, 피드 품질이 즉각 개선됩니다. 정리 후에는 내가 정말 원하는 정보들이 더 많은 비중으로 노출됩니다. 당연한 말 같지만, 실제로 해보면 피드가 '다른 앱'처럼 느껴질 정도의 변화가 있습니다.
+
+둘째, 상호작용 지수가 높아집니다. 실제로 활동 중이고 나를 맞팔하는 사람들이 많아질수록, 내 게시물에 반응할 잠재적 독자의 밀도가 높아집니다. 단 50명의 진성 팔로워가 500명의 유령 팔로워보다 계정 성장에 훨씬 강력한 영향을 줍니다.
+
+셋째, 계정 신뢰도의 문제입니다. 팔로워가 200명인데 팔로잉이 3,000명인 계정은 스팸 계정으로 오해받기 쉽습니다. 건강한 비율은 플랫폼마다 다르지만, Threads에서는 팔로잉이 팔로워보다 지나치게 많을 경우 신규 방문자의 팔로우 전환율이 눈에 띄게 떨어집니다.
 
 ## 전문가의 언팔로우 단계별 전략
 
 ### 1. 현황 파악과 데이터 수집
-먼저 현재 내 팔로워와 팔로잉 목록을 정확히 파악해야 합니다. 수동으로 하나씩 대조하는 것은 시간을 낭비하는 일입니다. Threads Garden과 같은 도구를 사용하여 누가 나를 맞팔하고 있지 않은지 한눈에 리스트업하세요.
 
-### 2. 선별적 제거의 기준
-무조건 비맞팔이라고 삭제하는 것은 위험합니다. 다음과 같은 기준을 세워보세요. 
-- 6개월 이상 게시물이 없는 계정: 확실한 삭제 대상입니다. 
-- 콘텐츠가 내 관심사와 전혀 무관해진 계정: 내 피드를 위해 과감히 정리하세요. 
-- 대형 브랜드나 인플루언서: 맞팔을 기대하기 힘든 구조이므로, 정보를 얻고 싶다면 유지하고 소통이 목적이라면 전략을 수정하세요.
+먼저 정확한 숫자를 파악하세요. Threads Garden 같은 분석 도구로 비맞팔 계정 전체를 한눈에 파악하는 것이 첫 단계입니다. 이때 목록을 그냥 보는 것이 아니라, 각 계정의 최근 활동 여부, 팔로워 수, 계정 유형(개인/브랜드)을 함께 확인하면 다음 단계가 훨씬 정교해집니다.
 
-### 3. 안전한 속도 지키기
-Threads는 단시간에 대량의 언팔로우를 진행할 경우 봇(Bot)으로 오해하여 계정을 제한할 수 있습니다. 한 번에 20명 내외로, 하루 총 50명 정도를 넘기지 않는 선에서 꾸준히 진행하는 것이 가장 안전합니다.
+### 2. 선별적 제거의 기준 세우기
 
-## 결론: 깨끗해진 정원에서 시작하세요
-정리가 끝나면 피드가 이전보다 훨씬 선명해진 것을 느낄 수 있을 것입니다. 이제 그 빈자리에 당신의 인사이트에 공감해줄 진짜 파트너들을 채워보세요.
-      `,
+무조건 비맞팔이라고 삭제하는 것은 전략적으로 틀렸습니다. 다음 기준으로 우선순위를 정하세요.
+
+- 6개월 이상 게시물이 없는 계정: 확실한 삭제 대상입니다. 이런 계정들은 알고리즘에 아무런 긍정적 기여를 하지 못합니다.
+- 콘텐츠가 내 관심사와 전혀 무관해진 계정: 피드 노이즈의 주범입니다. 예전에 맞팔 유도로 팔로우한 계정들이 여기에 해당하는 경우가 많습니다.
+- 팔로워 10만 이상의 대형 계정: 이들이 맞팔을 안 하는 건 당연합니다. 실제로 정보를 얻고 있다면 유지하고, 단순히 숫자 채우기용이었다면 정리하세요.
+
+반대로 절대 삭제하지 말아야 할 계정도 있습니다. 아직 비맞팔이지만 나와 비슷한 결을 가진 소규모 계정, 그리고 내가 먼저 진심 어린 댓글을 남긴 적 있는 계정들은 가능성이 있는 관계입니다.
+
+### 3. 안전한 속도 유지하기
+
+Threads는 단시간에 대량의 언팔로우를 진행할 경우 봇으로 오해하여 계정을 일시 제한할 수 있습니다. 경험상 안전한 속도는 하루 30~50명 이내입니다. 이것을 습관처럼 매주 30분씩 하는 것이 한 번에 몰아서 하는 것보다 훨씬 효과적이고 안전합니다.
+
+### 4. 정리 후 회복 기간의 비밀
+
+언팔로우를 진행한 직후에는 알고리즘이 재조정하는 시간이 필요합니다. 보통 2~3일 정도 기다리면 피드가 눈에 띄게 달라집니다. 이 기간 동안 조급하게 다시 팔로우를 늘리려 하지 마세요. 잠시 기다리면 알고리즘이 새롭게 재구성된 팔로잉 목록을 바탕으로 더 정밀한 피드를 만들어 드릴 것입니다.
+
+## 결론: 깨끗해진 정원에서 다시 시작하세요
+
+정리가 끝나면 피드가 이전보다 훨씬 선명해진 것을 느낄 수 있을 것입니다. 이제 그 빈자리에 당신의 인사이트에 진심으로 공감해줄 파트너들을 채워보세요. 한 달에 한 번, 이 과정을 반복하면 여러분의 Threads는 점점 더 여러분다운 공간이 될 것입니다.`,
     },
     en: {
       title: 'Threads Unfollow Guide: The First Step to a Healthy Feed',
-      description: 'It\'s not just about the numbers. It\'s about reclaiming your digital environment and boosting engagement.',
+      description: 'It\'s not just about the numbers. It\'s about reclaiming your digital environment, boosting engagement, and building a garden of real connections.',
       category: 'Guide',
-      content: `
-## The Silent Gaze of the Algorithm
+      content: `## The Silent Gaze of the Algorithm
 
-On Threads, your "Following" list is more than just a list of names. It\'s the primary data source the algorithm uses to understand what you like. If your list is cluttered with inactive or non-reciprocal accounts, your digital garden is effectively overrun by weeds.
+On Threads, your Following list is more than just a list of names. It\'s the primary behavioral data source the algorithm uses to understand what kind of content you want and—crucially—how "alive" your social network is. If your list is cluttered with inactive or non-reciprocal accounts, your digital garden is effectively overrun by weeds. And the algorithm knows it.
 
-## Why Cleanup is Essential Now
+What most people don\'t realize is that the algorithm doesn\'t just look at who you follow; it tracks the quality of those relationships. An account you follow but have never liked, commented on, or engaged with in any way is what I call a "dead link." Too many of these, and the system quietly deprioritizes your posts in return.
 
-Most creators obsess over followers, but cleaning your Following list is the real engine of growth.
-First, it improves your feed quality. You start seeing the content you actually care about. 
-Second, it boosts your engagement rate. By focusing on mutual connections, your interactions become more meaningful. 
-Third, it builds trust. A lopsided ratio (e.g., following 5k but having 100 followers) often flags an account as low-value or spammy.
+## Why Cleanup is Essential Right Now
+
+Most creators obsess over growing their follower count, but cleaning the Following list is often the highest-ROI action you can take in a single afternoon.
+
+First, it immediately improves your feed quality. After a good prune, your feed starts to feel like a different app—curated, focused, and actually useful. This isn't just a quality-of-life improvement; it changes how you interact with the platform, which the algorithm rewards.
+
+Second, it boosts your engagement rate. A smaller, more active group of mutual connections means the people in your feed are far more likely to see and respond to your posts. Fifty highly engaged followers will do more for your account health than five hundred ghosts.
+
+Third, it's a trust signal to visitors. A lopsided ratio—following 3,000 but followed by 200—is often the first thing a new visitor notices, and it frequently costs you the follow. Perception matters more than most people admit.
 
 ## The Expert Unfollow Strategy
 
-### 1. Audit and Data Gathering
-Don\'t do this manually. Use a tool like SNS Garden to contrast your Followers and Following lists. Identify the "Weeds"—those who don\'t follow you back—efficiently.
+### Step 1: Audit Your List
 
-### 2. Criteria for Removal
-Don\'t just delete everyone. Use a selective approach:
-- Inactive accounts: If they haven\'t posted in 3-6 months, they are safe to remove.
-- Irrelevant content: If their posts no longer align with your interests, they are polluting your feed.
-- Brands and Influencers: Keep them only if you derive value from their posts, as they rarely follow back.
+Don\'t do this by memory. Use a tool like SNS Garden to surface all non-mutual follows in a single, sorted list. When reviewing, note the account\'s last post date, follower count, and content type. This gives you a proper triage system for the next step.
 
-### 3. Maintaining Stealth and Safety
-Threads monitors rapid actions. Unfollowing hundreds of accounts in minutes will get you flagged. Aim for small batches of 20 at a time, staying under 50-100 per day to keep your account safe from restrictions.
+### Step 2: Apply Selective Criteria
 
-## Conclusion: Start Fresh
-Once you\'ve cleared the noise, you\'ll find your feed becomes much more inspiring. Fill those gaps with people who actually value your insights.
-      `,
+Not every non-follower deserves to be cut. Use a tiered approach:
+
+- Inactive accounts (no posts in 6+ months): Remove without hesitation. These accounts contribute absolutely nothing to your network.
+- Off-topic accounts: If their content no longer aligns with your interests, they are algorithmic noise. Cut them.
+- Large brands and celebrity accounts: Keep them only if you actively consume their content. If they were a vanity follow, let them go.
+
+On the flip side, don\'t cut small active accounts who simply haven\'t followed back yet—especially if you\'ve left genuine comments on their posts. These are relationships in progress.
+
+### Step 3: Maintain a Safe Pace
+
+Threads monitors rapid behavioral changes. Unfollowing hundreds of accounts in a single session will flag your account as potentially automated. A safe daily limit is 30-50 accounts. Making this a weekly 30-minute habit produces far better results than occasional mass purges.
+
+### Step 4: The Recovery Window
+
+After a cleanup, the algorithm needs 2-3 days to recalibrate with your new network map. Don\'t rush to fill the gap immediately. Let the system adjust. When it does, the improved feed quality you\'ll experience is the clearest confirmation that the cleanup worked.
+
+## Plant Something New
+
+Once the weeds are gone, the garden has room to breathe. Use that space intentionally. Follow people you genuinely want to talk to—not to inflate a number, but to build a network that actually serves you. Repeat this process monthly, and over time, your Threads presence will start to feel like an actual community rather than a crowded, noisy lobby.`,
     },
     date: '2025.06.15',
-    readTime: 6,
+    readTime: 8,
     platform: 'threads',
   },
   {
     slug: 'threads-algorithm-2025',
     ko: {
-      title: '2025 Threads 알고리즘: 노출의 법칙을 깨다',
-      description: '메타의 최신 업데이트를 바탕으로 내 글을 더 멀리 퍼뜨리는 핵심 로직을 심층적으로 분석합니다.',
+      title: '2025 Threads 알고리즘: 노출의 법칙을 완전히 이해하다',
+      description: '메타의 최신 업데이트를 바탕으로 내 글을 더 멀리 퍼뜨리는 핵심 로직과 실전 전술을 심층 분석합니다.',
       category: '알고리즘',
-      content: `
-## 알고리즘 뒤에 숨겨진 철학
+      content: `## 알고리즘 뒤에 숨겨진 철학
 
-Threads의 알고리즘은 인스타그램보다 더 '대화 중심'적입니다. 단순히 예쁜 사진을 올린다고 해서 노출이 보장되지 않습니다. 2025년 현재, 알고리즘은 사용자들이 내 글에 얼마나 오래 머물고(Dwell Time), 얼마나 의미 있는 대화를 이어가는지를 가장 중요하게 봅니다.
+Threads의 알고리즘은 인스타그램보다 더 '대화 중심'으로 설계되어 있습니다. 단순히 예쁜 사진이나 트렌디한 해시태그를 올린다고 해서 노출이 보장되지 않습니다. 2025년 현재, Threads 알고리즘이 가장 중요하게 보는 두 가지 지표는 체류 시간(Dwell Time)과 대화의 깊이(Conversation Depth)입니다.
 
-## 배포의 3단계 로직
+체류 시간이란 사용자가 내 게시물 위에 얼마나 오래 머무르는가입니다. 스크롤을 멈추고 텍스트를 읽는 행위 자체가 신호가 됩니다. 대화의 깊이는 댓글이 달렸을 때 그 댓글에 또 댓글이 달리고, 그 스레드가 얼마나 길게 이어지는가를 측정합니다. 긴 댓글 체인이 형성될수록 알고리즘은 해당 게시물을 더 많은 사람에게 배포합니다.
 
-### 1단계: 초기 테스트 (Seed Audience)
-게시물을 올리면 먼저 여러분의 팔로워 중 아주 소수에게만 글이 노출됩니다. 이 단계에서 리포스트나 댓글이 발생하지 않으면 글의 수명은 거기서 끝납니다.
+## 배포의 3단계 로직과 숨겨진 규칙
 
-### 2단계: 신뢰 점수 부여 (Scoring)
-초기 반응이 좋다면 알고리즘은 게시물에 가중치를 부여합니다. 이때 '단순 좋아요'보다 '텍스트가 포함된 댓글'이 5배 이상의 점수를 얻습니다. 특히 작성자가 직접 답글을 달아 대화를 유지하면 점수는 기하급수적으로 올라갑니다.
+### 1단계: 초기 씨드 오디언스 테스트 (Seed Audience)
 
-### 3단계: 탐색 탭 및 전면 노출 (Global Distribution)
-신뢰 점수가 일정 수준을 넘으면, 나를 팔로우하지 않는 사람들의 '추천 피드'에 내 글이 걸리게 됩니다. 이것이 바로 '떡상'의 시작입니다.
+게시물을 올리면 먼저 여러분의 팔로워 중 아주 소수에게만 글이 노출됩니다. 이 초기 그룹의 크기는 보통 팔로워의 1~5% 수준입니다. 팔로워가 1,000명이라면 10~50명 정도가 먼저 봅니다.
 
-## 2025년형 노출 극대화 전략
+여기서 중요한 사실은 이 씨드 오디언스가 무작위가 아니라는 점입니다. 알고리즘은 여러분과 최근에 상호작용한 사람들, 즉 댓글을 달거나 리포스트한 적 있는 계정들로 씨드 오디언스를 구성합니다. 이 단계에서 리포스트나 댓글이 전혀 발생하지 않으면, 게시물의 알고리즘적 수명은 거기서 끝납니다.
 
-- 첫 문장은 반드시 후킹하라: 검색 최적화가 포함된 강력한 한 문장으로 시작하세요.
-- 이미지보다는 글의 깊이: 이미지는 보조 수단일 뿐입니다. 사람들을 멈추게 하는 통찰력이 담긴 긴 글이 완독률을 높입니다.
-- 시간대보다 반응 속도: 언제 올리느냐보다, 댓글이 달렸을 때 얼마나 빨리 답글을 다느냐가 노출 지속 시간을 결정합니다.
+### 2단계: 상호작용 점수화와 가중치 (Scoring Phase)
 
-결국 도구는 거들 뿐, 사람들과의 진짜 연결이 알고리즘을 이기는 유일한 방법입니다.
-      `,
+초기 반응이 있다면 알고리즘은 각 상호작용에 점수를 부여합니다. 경험과 관찰을 통해 추정되는 가중치는 대략 이렇습니다.
+
+- 단순 좋아요: 1점
+- 링크 없는 텍스트 댓글: 5~8점
+- 작성자가 답글을 달았을 때: 추가 3~5점
+- 리포스트: 10~15점
+- 퀴오트 리포스트(의견 추가): 15~20점
+
+여기서 주목할 점은 작성자의 답글입니다. 내 게시물에 댓글이 달렸을 때 빠르게 답글을 달면, 그 대화 스레드 전체의 점수가 올라가고 알고리즘은 이 게시물이 '활발히 살아있음'을 인식합니다. 첫 댓글이 달린 후 60분 이내에 답글을 다는 것이 가장 효과적입니다.
+
+### 3단계: 탐색 탭 및 글로벌 배포 (Global Distribution)
+
+신뢰 점수가 일정 임계값을 넘으면, 나를 팔로우하지 않는 사람들의 추천 피드에 게시물이 나타나기 시작합니다. 이것이 이른바 '떡상'의 시작점입니다. 이 단계에 진입한 게시물은 별도의 행동 없이도 자체적으로 확산되는 '자생력'을 갖게 됩니다.
+
+## 2025년형 노출 극대화 5가지 전술
+
+### 1. 첫 문장으로 스크롤을 멈춰라
+Threads 피드에서 보이는 것은 글의 첫 두 줄뿐입니다. 이 두 줄 안에 "더 보기"를 누를 이유를 만들어야 합니다. 질문, 놀라운 통계, 혹은 반직관적 주장이 가장 효과적입니다.
+
+### 2. 이미지를 버리고 텍스트에 집중하라
+Threads에서는 텍스트 기반 게시물의 체류 시간이 이미지 게시물보다 평균 40% 이상 높습니다. 이미지는 보조 수단으로만 활용하세요.
+
+### 3. 답글 속도가 게시 시간보다 중요하다
+몇 시에 올리느냐는 생각보다 덜 중요합니다. 댓글이 달렸을 때 얼마나 빨리 대화를 이어가느냐가 노출 지속 시간을 결정합니다.
+
+### 4. 연재 포맷을 활용하라
+"내일 이어서 씁니다"처럼 다음 게시물을 예고하는 연재 구조는 팔로워들이 알림을 켜게 만들고, 이는 알고리즘에 강력한 충성 신호를 보냅니다.
+
+### 5. 타 계정의 게시물에 가치 있는 댓글을 남겨라
+내 게시물을 올리는 것 외에, 내 타겟 오디언스가 모여있는 다른 계정의 게시물에 깊이 있는 댓글을 남기면 해당 계정의 팔로워들에게 내 존재를 알릴 수 있습니다. 이것은 사실상 무료 광고입니다.
+
+## 결론
+
+알고리즘은 결국 사람들의 진짜 반응을 수학으로 측정하는 도구입니다. 도구의 논리를 이해하되, 사람들이 진심으로 반응할 수 있는 콘텐츠를 만드는 것이 장기적으로 알고리즘을 이기는 유일한 방법입니다.`,
     },
     en: {
-      title: '2025 Threads Algorithm: Cracking the Reach Code',
-      description: 'Deep dive into Meta\'s latest updates and how to maximize your content distribution.',
+      title: '2025 Threads Algorithm: A Complete Guide to Cracking the Reach Code',
+      description: 'Deep dive into Meta\'s latest behavioral signals and how to systematically maximize your content distribution.',
       category: 'Algorithm',
-      content: `
-## The Philosophy Behind the Code
+      content: `## The Philosophy Behind the Algorithm
 
-The Threads algorithm is far more conversation-driven than Instagram. Pretty photos aren't enough. In 2025, the system prioritizes "Dwell Time"—how long users spend on your post—and "Meaningful Interaction"—how deep the conversation goes.
+The Threads algorithm is far more conversation-driven than Instagram has ever been. Aesthetic images and trending hashtags won't get you far here. In 2025, the two metrics that matter most are Dwell Time—how long users actually pause and read your post—and Conversation Depth—how many layers of replies a single comment thread generates.
 
-## The 3-Step Distribution Logic
+Dwell Time is measured precisely. The algorithm tracks whether users scrolled past or paused, and for how long. Conversation Depth is measured by chain length: a single post that generates a 15-reply thread signals to the system that something meaningful is happening here and pushes the post wider.
 
-### Step 1: Seed Audience Testing
-When you post, a tiny fraction of your followers sees it first. If there\'s no immediate reaction (reposts or comments), the post\'s lifespan ends there.
+## The 3-Stage Distribution Logic
 
-### Step 2: Scoring for Authority
-If the initial reaction is positive, the system scores the post. A text-based reply is worth 5x more than a simple Like. If the author responds to that reply, the score compounds exponentially.
+### Stage 1: Seed Audience Testing
 
-### Step 3: Global Distribution (The Explore Feed)
-Once the score hits a threshold, your post is pushed to the "For You" feeds of people who don\'t follow you. This is how you go viral.
+Every post starts with a "seed"—a small, algorithmically selected group that sees it first. This group is typically 1-5% of your followers. For a 1,000-follower account, that's roughly 10-50 people.
 
-## 2025 Visibility Tactics
+Critically, this group is not random. The algorithm prioritizes accounts with whom you've had recent mutual interactions—people who've commented on your posts or whose posts you've engaged with recently. If your seed group generates no reposts or comments, the post's algorithmic lifetime ends there.
 
-- Hook with the first line: Use a strong, keyword-rich sentence that forces people to click "See More."
-- Depth over Decor: Images are secondary. Profound insights in text form drive the Dwell Time that the algorithm loves.
-- Response Speed > Posting Time: It\'s less about when you post and more about how fast you respond to the first 10 comments.
+### Stage 2: Engagement Scoring
 
-At the end of the day, authentic human connection is the only "hack" that never fails.
-      `,
+If initial reactions exist, the system begins scoring. Based on observed patterns, the approximate weights are:
+
+- Simple Like: 1 point
+- Text comment (without links): 5–8 points
+- Author reply to a comment: Additional 3–5 points
+- Repost: 10–15 points
+- Quote Repost with opinion added: 15–20 points
+
+The key insight here is the author reply multiplier. When you respond to a comment within 60 minutes of its arrival, the entire conversation thread gets a scoring boost, and the algorithm flags the post as "actively alive." This is one of the highest-leverage actions you can take after posting.
+
+### Stage 3: Global Distribution
+
+Once a post\'s score crosses a threshold, it begins appearing in the For You feeds of users who don\'t follow you. This is where organic virality begins. Posts that reach this stage develop a self-sustaining momentum—each new engagement introduces the post to another fresh audience.
+
+## 5 Proven Tactics for 2025
+
+### 1. Engineer Your First Two Lines
+The Threads feed shows only the first two lines before a "See More" cutoff. Make those two lines impossible to ignore. Use a counterintuitive claim, a surprising statistic, or a direct question that demands an answer.
+
+### 2. Text Over Images
+Text-based posts on Threads generate approximately 40% more dwell time than image posts on average. Images are a secondary tool here—use them as illustration, not as the main event.
+
+### 3. Response Speed > Posting Time
+The time of day you post matters far less than how quickly you respond to your first comment. Your first reply initiates a conversation thread and triggers a scoring spike within the first hour.
+
+### 4. Use a Serial Format
+Hinting at a follow-up post ("I\'ll share Part 2 tomorrow") conditions followers to turn on notifications. A high notification-open rate is one of the strongest loyalty signals the algorithm can detect.
+
+### 5. Leave Substantive Comments on Other Posts
+Your own posting is only half the equation. Leaving deeply thoughtful comments on posts within your niche introduces you to new audiences for free. If your comment is good enough to provoke a reply, that reply appears in the original poster\'s followers\' feeds—carrying your name with it.
+
+## Bottom Line
+
+The algorithm is ultimately a mathematical model of human attention. Understanding the logic is necessary, but the only strategy that survives long-term is making content that real people genuinely want to engage with. The tools and tactics help you be seen. What you say is what makes people stay.`,
     },
     date: '2025.07.02',
-    readTime: 8,
+    readTime: 10,
     platform: 'threads',
   },
   {
     slug: 'grow-threads-followers',
     ko: {
       title: '진짜 팔로워를 만드는 5가지 불변의 법칙',
-      description: '인위적인 맞팔 유도 없이도 내 콘텐츠에 반응하는 열성 팬을 확보하는 실전 전략을 공유합니다.',
+      description: '인위적인 맞팔 유도 없이도 내 콘텐츠에 반응하는 열성 팬을 확보하는 실전 전략. 초보부터 중급자까지 적용 가능한 체계적인 성장 가이드입니다.',
       category: '성장 전략',
-      content: `
-## 숫자의 함정에서 벗어나기
+      content: `## 숫자의 함정에서 벗어나기
 
-팔로워 1만 명보다 팔로워 100명의 진심 어린 반응이 더 가치 있습니다. 수익화나 영향력을 원한다면, 단순히 버튼만 누르는 사람들이 아닌 당신의 목소리에 귀를 기울이는 '팬'을 만들어야 합니다.
+팔로워 1만 명보다 팔로워 100명의 진심 어린 반응이 더 가치 있습니다. 이건 위로성 말이 아니라 데이터에 기반한 사실입니다. 인스타그램 마케팅 조사에 따르면, 팔로워 1천 명 미만의 마이크로 인플루언서는 팔로워 10만 명 이상의 대형 인플루언서보다 평균 참여율이 7~8배 높습니다. 시장은 이미 이 사실을 알고 있고, 기업들은 점점 더 높은 단가를 주고 마이크로 인플루언서와 협업하고 있습니다.
+
+수익화나 진짜 영향력을 원한다면, 당신의 목소리에 귀를 기울이는 '팬'을 만들어야 합니다. 그리고 팬은 알고리즘 해킹으로 만들어지지 않습니다.
 
 ## 5가지 성장 원칙
 
-### 1. 나만의 뾰족한 페르소나 구축
-모든 사람을 만족시킬 수는 없습니다. "나는 개발자들에게 뼈 때리는 조언을 해주는 사람" 혹은 "바쁜 워킹맘에게 3분 스트레칭을 가르치는 사람"처럼 확실한 정체성이 팔로우 결정을 돕습니다.
+### 1. 뾰족한 페르소나: 나를 선명하게 정의하라
 
-### 2. 가치와 공감의 밸런스
-유용한 정보만 올리면 기계 같고, 일상만 올리면 친한 친구 외에는 팔로우할 이유가 없습니다. '8:2 법칙'을 기억하세요. 80%는 정보를 주고, 20%는 인간적인 면모를 보여주세요.
+모든 사람을 만족시키려는 계정은 결국 아무도 만족시키지 못합니다. 가장 빠르게 성장하는 Threads 계정들의 공통점은 하나입니다. 주제가 명확하다는 것.
 
-### 3. 활발한 '남의 집' 활동
-내 정원에만 머물지 마세요. 내 타겟 독자들이 모여있는 다른 유명 계정의 댓글 창에서 유익한 의견을 남기세요. 당신의 댓글을 본 사람들이 당신의 프로필을 클릭하게 만드는 것, 그것이 최고의 광고입니다.
+"마케팅 정보를 올립니다"는 너무 넓습니다. "콘텐츠 제작자를 위한 알고리즘 분석기"는 뾰족합니다. "요리 정보를 올립니다"는 넓습니다. "워킹맘을 위한 15분 안에 만드는 반찬"은 뾰족합니다.
 
-### 4. 리포스트를 부르는 템플릿
-"이건 저장해둬야겠다" 싶은 리스트형 포스트나 "나도 그렇게 생각해"라고 외치게 만드는 공감형 문구를 사용하세요. 리포스트는 가장 강력한 팔로워 유입 통로입니다.
+뾰족한 페르소나는 처음 프로필을 방문한 사람이 0.5초 안에 "이 계정은 나를 위한 것"이라고 느끼게 합니다. 팔로우 버튼은 그 직후에 눌립니다.
 
-### 5. 정기적인 정원 관리
-주기적으로 활동하지 않는 계정들을 정리함으로써 내 계정의 지수를 관리하세요. 깨끗한 계정일수록 알고리즘은 더 건강한 독자들에게 당신을 추천합니다.
+### 2. 8:2 법칙: 가치와 인간미의 균형
+
+정보만 올리는 계정은 교과서처럼 유용하지만 팔로우를 유지할 감정적 이유가 없습니다. 반대로 일상만 올리는 계정은 친한 친구 아니고는 팔로우할 이유가 없습니다.
+
+가장 지속 가능한 비율은 80%의 가치 게시물과 20%의 인간적인 게시물입니다. 80%에는 실용적인 팁, 분석, 관찰, 트렌드 해석이 들어갑니다. 20%에는 실패담, 가벼운 일상, 의견 공유, 자기 성찰이 들어갑니다. 이 20%가 팔로워를 팬으로 바꾸는 결정적인 요소입니다.
+
+### 3. '남의 집' 활동: 내 계정 밖에서의 존재감
+
+내 프로필만 열심히 업데이트해서는 성장에 한계가 있습니다. 팔로워를 늘리는 가장 빠른 방법 중 하나는 내 타겟 독자들이 자주 모이는 다른 계정의 게시물에 깊이 있는 댓글을 남기는 것입니다.
+
+단순 칭찬이나 이모지 댓글은 아무도 기억하지 않습니다. "이 말씀이 맞는데, 한 가지 추가하면..." 또는 "저는 다른 경험이 있었어요. 오히려..." 처럼 대화를 확장하는 댓글이 프로필 클릭을 유도합니다. 이렇게 유입된 방문자의 팔로우 전환율은 광고 유입보다 훨씬 높습니다.
+
+### 4. 리포스트를 부르는 포맷 전략
+
+"이건 저장해두어야겠다"고 느끼게 하는 게시물에는 공통된 구조가 있습니다. 구체적인 숫자와 리스트, 명확한 결론, 그리고 즉시 적용 가능한 단계. 예를 들어 "Threads 팔로워를 300% 늘린 3가지 방법"은 호기심을 자극하고, 구체적이고, 리포스트하고 싶은 포맷입니다.
+
+리포스트는 단순히 더 많은 사람에게 내 글이 노출되는 것 이상의 의미가 있습니다. 리포스트한 사람의 신뢰도를 내가 빌리는 효과가 있습니다. 그의 팔로워들은 "내가 신뢰하는 사람이 좋다고 한 계정"으로 나를 인식하게 됩니다.
+
+### 5. 첫 100명 서바이벌 가이드
+
+첫 100명의 팔로워를 모으는 것이 가장 어렵습니다. 이 시기에는 다음 두 가지를 집중하세요.
+
+첫째, 지금 당장 게시물을 올리세요. 완벽하지 않아도 됩니다. 계정이 비어있으면 아무도 팔로우하지 않습니다. 최소 9개의 게시물이 있어야 방문자가 "이 계정이 어떤 계정인지" 파악할 수 있습니다.
+
+둘째, 지인 네트워크를 활용하세요. 처음부터 완전한 낯선 사람을 대상으로 하지 마세요. 내 콘텐츠에 진심으로 관심을 가질 지인 20~30명에게 먼저 알리는 것이, 천 명의 낯선 사람에게 알리는 것보다 초기 신호 축적에 훨씬 효과적입니다.
 
 ## 꾸준함은 모든 전략을 이깁니다
-단기적인 성과에 일희일비하지 마세요. 당신의 정원을 매일 가꾸다 보면 어느새 꽃이 피고 나비(팔로워)들이 모여들 것입니다.
-      `,
+
+단기적인 성과에 일희일비하지 마세요. 팔로워 성장은 선형이 아니라 지수함수형입니다. 처음 3개월은 느릿느릿 오르다가, 기반이 쌓이면 어느 순간 가파르게 오릅니다. 이 과정에서 포기하지 않는 것이 가장 중요한 전략입니다.`,
     },
     en: {
       title: '5 Irrefutable Laws for Real Growth on Threads',
-      description: 'How to build a loyal fanbase that actually responds to your voice, without using spammy tactics.',
+      description: 'A systematic guide to building a loyal, engaged fanbase without shortcuts. From your first 100 followers to sustainable long-term growth.',
       category: 'Growth',
-      content: `
-## Escaping the Number Trap
+      content: `## Escaping the Number Trap
 
-A hundred genuine followers are worth more than ten thousand ghost followers. If you want monetization or influence, you need "Fans"—people who listen—not just names on a list.
+A hundred genuine followers are worth more than ten thousand ghost followers. This isn\'t a consolation prize—it\'s a documented market reality. Studies on influencer marketing consistently show that micro-influencers (under 10,000 followers) achieve 7-8x higher engagement rates than macro-influencers. Brands have noticed. They\'re actively paying premium rates to access these tightly-knit, high-trust audiences.
 
-## 5 Principles for Growth
+If you want real monetization or genuine influence, you need "Fans"—people who actually listen to you. And fans don\'t get manufactured by algorithm hacks.
 
-### 1. Build a Sharp Persona
-You cannot please everyone. Be specific. "The developer who gives blunt advice" or "The mom who shares 3-minute morning stretches." Clarity drives follows.
+## 5 Laws of Real Growth
 
-### 2. Balance Between Value and Vulnerability
-If you only post info, you\'re a manual. If you only post your life, you\'re just a friend. Use the 80/20 rule: 80% high-value info, 20% human connection.
+### Law 1: Build a Sharp Persona—Define Yourself Precisely
 
-### 3. Commenting on the "Big Gardens"
-Don\'t just stay in your profile. Go to the comment sections of popular creators in your niche. Leave insightful, smart replies. High-value comments drive clicks to your profile—this is the best free ad you\'ll ever get.
+The fastest-growing Threads accounts share one trait: they are unmistakably specific about who they are and who they serve.
 
-### 4. Share-Worthy Templates
-Use lists people want to "Save" or relatable quotes people want to "Repost." Reposts are the single most powerful way to reach new audiences on Threads.
+"I post marketing tips" is too broad. "Algorithm breakdowns for solo content creators" is specific. "I post food content" is too broad. "15-minute weeknight dinners for working parents" is specific. The difference is measurable in follower conversion rates.
 
-### 5. Regular Maintenance
-Prune your following list regularly. By removing inactive or non-responsive accounts, you maintain a high account authority, signalling to the algorithm that your profile is a hub for active humans.
+A sharp persona means that within 0.5 seconds of visiting your profile, a stranger knows exactly whether your content is for them. The follow button gets pressed—or doesn\'t—in the next second.
 
-## Consistency Beats Strategy
-Don\'t expect overnight success. Tend to your garden every day, and eventually, the flowers will bloom and the butterflies (followers) will arrive.
-      `,
+### Law 2: The 80/20 Rule of Value and Humanity
+
+An account that posts only information is useful but forgettable. An account that posts only personal life updates only retains close friends. The sustainable balance is 80% value posts and 20% human connection posts.
+
+Your 80%: practical tips, analysis, trend interpretations, how-to guides. Your 20%: failure stories, light personal updates, opinions, questions. That 20% is what converts a follower into a fan. It\'s the glimpse behind the curtain that makes people feel like they know you.
+
+### Law 3: Work the "Other People\'s Rooms"
+
+Updating only your own profile creates a ceiling on your growth. One of the fastest organic growth tactics is leaving high-quality comments on posts in your niche.
+
+Not emoji replies. Not "great post!" The kind of comment that extends the conversation: "This is true, and I\'d add one nuance..." or "I had the opposite experience, actually..." Comments that make people think invite profile clicks. The follow rate of visitors who arrive this way is far higher than almost any other source.
+
+### Law 4: Create Formats Designed to Be Shared
+
+Posts that get reposted share a common structure: specific numbers, clear conclusions, immediately actionable steps. "3 ways I grew my Threads followers by 300%" contains a specific outcome, a specific number, and implies a list. It\'s a repost magnet.
+
+Beyond reach, a repost carries the social proof of the person sharing it. You\'re effectively borrowing their credibility. Their followers see you as someone their trusted contact personally endorsed—a far warmer introduction than any ad could provide.
+
+### Law 5: The First 100 Followers Survival Guide
+
+The first hundred followers is the hardest phase. Two priorities dominate this period.
+
+First, publish immediately. Imperfection is acceptable; emptiness is not. A profile with fewer than 9 posts gives visitors nothing to evaluate. You don\'t earn a follow without showing what you\'re about.
+
+Second, start with your existing network. Don\'t begin by trying to reach strangers. Identify 20-30 people in your life who would genuinely find your content useful and tell them directly. These early followers produce the initial social signals that the algorithm uses to determine whether your account is worth distributing.
+
+## Consistency Beats Every Strategy
+
+Growth on Threads follows an exponential curve, not a linear one. The first three months feel flat and slow. Then, as your body of work accumulates and your network compounds, growth accelerates noticeably. The single most decisive factor in whether you ever reach that inflection point is whether you keep showing up before you can see the results.`,
     },
     date: '2025.07.20',
-    readTime: 7,
+    readTime: 9,
     platform: 'threads',
   },
+
   {
     slug: 'instagram-reels-hooks',
     ko: {

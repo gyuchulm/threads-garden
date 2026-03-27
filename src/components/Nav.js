@@ -55,6 +55,12 @@ export default function Nav() {
           >
             {t.nav.tips}
           </Link>
+          <Link
+            href="/about"
+            className={`${styles.tipsLink} ${pathname === '/about' ? styles.active : ''}`}
+          >
+            {t.nav.about}
+          </Link>
           <button
             className={styles.langToggle}
             onClick={() => setLang(lang === 'ko' ? 'en' : 'ko')}
