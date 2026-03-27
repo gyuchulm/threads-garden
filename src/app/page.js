@@ -1,0 +1,302 @@
+'use client';
+
+import { useState, useCallback, useEffect, useRef } from 'react';
+import { useLang } from '@/context/LangContext';
+import { usePlatform } from '@/context/PlatformContext';
+import Link from 'next/link';
+import Footer from '@/components/Footer';
+
+// ─── 파싱 (Threads/Insta 공용: 불필요한 기호 제거 및 유동적 줄 바꿈 처리) ───
+function parseSocialText(raw) {
+  const lines = raw.split('\n')
+    .map(l => l.trim())
+    .filter(l => l && !['·', '•', 'Remove', 'Follow', 'Following'].includes(l));
+    
+  const data = {};
+  for (let i = 0; i < lines.length; i += 2) {
+    // 인스타그램 "아이디 · Follow" 또는 "아이디 · 팔로우" 등 가변 형태 대응
+    // 점(·)이나 불렛(•) 기준으로 앞부분만 추출
+    const rawId = lines[i];
+    const username = rawId.split('·')[0].split('•')[0].trim();
+    const description = lines[i + 1] ?? '정보 없음';
+    data[username] = description;
+  }
+  return data;
+}
+
+function getInitial(username) {
+  return username ? username[0].toUpperCase() : '?';
+}
+
+function downloadCSV(data, platform) {
+  const header = '아이디,이름/소개,프로필 링크\n';
+  const baseUrl = platform === 'threads' ? 'https://www.threads.net/@' : 'https://www.instagram.com/';
+  const rows = data
+    .map(r => `"${r.username}","${r.description}","${baseUrl}${r.username}"`)
+    .join('\n');
+  const blob = new Blob(['\uFEFF' + header + rows], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${platform}_garden_weeds.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ─── 청소 중 애니메이션 훅 ───
+const TOOLS = ['🧹', '⛏️', '🪣', '🌿'];
+function useCleaningAnim(active) {
+  const [frame, setFrame] = useState(0);
+  const ref = useRef(null);
+  useEffect(() => {
+    if (active) {
+      ref.current = setInterval(() => setFrame(f => (f + 1) % TOOLS.length), 400);
+    } else {
+      clearInterval(ref.current);
+      setFrame(0);
+    }
+    return () => clearInterval(ref.current);
+  }, [active]);
+  return TOOLS[frame];
+}
+
+export default function Home() {
+  const { lang, t } = useLang();
+  const { platform } = usePlatform();
+  const [followersRaw, setFollowersRaw] = useState('');
+  const [followingRaw, setFollowingRaw] = useState('');
+  const [results, setResults] = useState(null);
+  const [error, setError] = useState('');
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 100;
+  const tool = useCleaningAnim(isAnalyzing);
+
+  const followerCount = followersRaw.split('\n').filter(l => l.trim()).length;
+  const followingCount = followingRaw.split('\n').filter(l => l.trim()).length;
+
+  const analyze = useCallback(() => {
+    setError('');
+    if (!followersRaw.trim() || !followingRaw.trim()) {
+      setError(t.error.empty);
+      return;
+    }
+
+    setIsAnalyzing(true);
+    setResults(null);
+
+    // 청소 애니메이션 최소 1.4초 노출
+    setTimeout(() => {
+      const followersDict = parseSocialText(followersRaw);
+      const followingDict = parseSocialText(followingRaw);
+      const followerIds = new Set(Object.keys(followersDict));
+      const followingIds = new Set(Object.keys(followingDict));
+
+      const weeds = [...followingIds]
+        .filter(id => !followerIds.has(id))
+        .map(id => ({ username: id, description: followingDict[id] ?? '정보 없음' }))
+        .sort((a, b) => a.username.localeCompare(b.username));
+
+      setResults(weeds);
+      setCurrentPage(1);
+      setIsAnalyzing(false);
+    }, 1400);
+  }, [followersRaw, followingRaw, t]);
+
+  const canAnalyze = !isAnalyzing && followersRaw.trim().length > 0 && followingRaw.trim().length > 0;
+
+  return (
+    <main>
+      <div className="container">
+        {/* ── Hero ── */}
+        <header className="header">
+          <div className="header-badge">
+            {platform === 'threads' ? 'Threads Optimization' : 'Instagram Cleanup'}
+          </div>
+          <h1>{t.hero.title} <span>{platform === 'threads' ? 'Threads' : 'Instagram'} Garden</span></h1>
+          <p>{t.hero.desc}</p>
+        </header>
+
+        {/* ── Guide ── */}
+        <div className="guide">
+          {t.guide[platform].map((step, i) => (
+            <div key={i} className="guide-row">
+              {i > 0 && <div className="guide-divider" />}
+              <div className="guide-step">
+                <span className="step-num">{i + 1}</span>
+                <span><strong>{step.title}</strong> — {step.desc}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* ── Input Grid ── */}
+        <div className="input-grid">
+          <div className="input-card">
+            <div className="input-card-header">
+              <div className="input-card-icon followers">🪴</div>
+              <span className="input-card-title">{t.input.followersTitle}</span>
+              {followerCount > 0 && (
+                <span className="input-card-count">{Math.ceil(followerCount / 2)}{t.input.countUnit}</span>
+              )}
+            </div>
+            <textarea
+              id="followers-input"
+              placeholder={t.input.followersPlaceholder}
+              value={followersRaw}
+              onChange={e => setFollowersRaw(e.target.value)}
+            />
+          </div>
+          <div className="input-card">
+            <div className="input-card-header">
+              <div className="input-card-icon following">🌿</div>
+              <span className="input-card-title">{t.input.followingTitle}</span>
+              {followingCount > 0 && (
+                <span className="input-card-count">{Math.ceil(followingCount / 2)}{t.input.countUnit}</span>
+              )}
+            </div>
+            <textarea
+              id="following-input"
+              placeholder={t.input.followingPlaceholder}
+              value={followingRaw}
+              onChange={e => setFollowingRaw(e.target.value)}
+            />
+          </div>
+        </div>
+
+        {/* ── Error ── */}
+        {error && (
+          <div className="alert alert-error">
+            <span>⚠️</span>
+            <span>{error}</span>
+          </div>
+        )}
+
+        {/* ── Analyze Button ── */}
+        <div className="analyze-row">
+          <button
+            id="analyze-btn"
+            className={`btn-analyze ${isAnalyzing ? 'btn-analyzing' : ''}`}
+            onClick={analyze}
+            disabled={!canAnalyze}
+          >
+            {isAnalyzing ? (
+              <>
+                <span className="tool-spin">{tool}</span>
+                {t.btn.analyzing}
+              </>
+            ) : t.btn.analyze}
+          </button>
+        </div>
+        <div className="security-note">
+          🔒 {t.secureNote}
+        </div>
+
+        {/* ── Cleaning Overlay ── */}
+        {isAnalyzing && (
+          <div className="cleaning-banner">
+            <div className="cleaning-tools">
+              {TOOLS.map((emoji, i) => (
+                <span
+                  key={i}
+                  className="cleaning-tool"
+                  style={{ animationDelay: `${i * 0.15}s` }}
+                >
+                  {emoji}
+                </span>
+              ))}
+            </div>
+            <p className="cleaning-text">가든을 청소하고 있어요...</p>
+          </div>
+        )}
+
+        {/* ── Results ── */}
+        {results !== null && !isAnalyzing && (
+          <div className="results-section">
+            {results.length === 0 ? (
+              <div className="alert alert-success">
+                <span>🌸</span>
+                <span>{t.results.empty}</span>
+              </div>
+            ) : (
+              <>
+                <div className="alert alert-warning">
+                  <span>🌾</span>
+                  <span dangerouslySetInnerHTML={{ __html: t.results.warning(results.length) }} />
+                </div>
+                <div className="result-header">
+                  <div className="result-title">
+                    {t.results.title}
+                    <span className="result-badge">{results.length}</span>
+                  </div>
+                  <div className="result-actions">
+                    <button className="btn-export" onClick={() => downloadCSV(results, platform)}>
+                      📥 {t.btn.export}
+                    </button>
+                  </div>
+                </div>
+                <div className="table-wrapper">
+                  <table className="results-table">
+                    <thead>
+                      <tr>
+                        <th style={{ width: '40px' }}>#</th>
+                        <th>{t.table.id}</th>
+                        <th>{t.table.desc}</th>
+                        <th>{t.table.profile}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {results.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE).map((user, idx) => (
+                        <tr key={user.username}>
+                          <td className="idx-cell">{(currentPage - 1) * ITEMS_PER_PAGE + idx}</td>
+                          <td><span className="username">{user.username}</span></td>
+                          <td><span className="description">{user.description}</span></td>
+                          <td>
+                            <a
+                              href={platform === 'threads' 
+                                ? `https://www.threads.net/@${user.username}` 
+                                : `https://www.instagram.com/${user.username}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="raw-profile-link"
+                            >
+                              {platform === 'threads' ? '@' : ''}{user.username} {t.nav.guide === 'Guide' ? 'Profile' : '프로필'}
+                            </a>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                {results.length > ITEMS_PER_PAGE && (
+                  <div className="pagination">
+                    {Array.from({ length: Math.ceil(results.length / ITEMS_PER_PAGE) }).map((_, i) => (
+                      <button
+                        key={i}
+                        className={`page-btn ${currentPage === i + 1 ? 'active' : ''}`}
+                        onClick={() => setCurrentPage(i + 1)}
+                      >
+                        {i + 1}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        )}
+
+        {/* ── Tips Teaser ── */}
+        <section className="blog-teaser">
+          <div className="blog-teaser-header">
+            <h2>{t.tipsTeaser.title}</h2>
+            <Link href="/tips" className="blog-see-all">{t.tipsTeaser.cta}</Link>
+          </div>
+          <p className="blog-teaser-sub">{t.tipsTeaser.sub}</p>
+        </section>
+
+        <Footer />
+      </div>
+    </main>
+  );
+}
