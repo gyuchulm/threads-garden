@@ -5,97 +5,121 @@ import Footer from '@/components/Footer';
 
 export default function PrivacyPage() {
   const { lang } = useLang();
-  const today = '2025-03-20';
+  const today = '2026-03-27';
 
   return (
     <main>
       <div className="container">
-        <article className="article">
-          <header className="page-header">
-            <h1>{lang === 'ko' ? '개인정보처리방침' : 'Privacy Policy'}</h1>
-            <p className="article-lead">
-              {lang === 'ko' ? `최종 수정일: ${today}` : `Last updated: ${today}`}
-            </p>
-          </header>
+        <header className="page-header">
+          <div className="header-badge">🛡️ {lang === 'ko' ? '보안 및 신뢰' : 'Security & Trust'}</div>
+          <h1>{lang === 'ko' ? '개인정보처리방침' : 'Privacy Policy'}</h1>
+          <p className="article-lead">
+            {lang === 'ko' ? `최종 수정일: ${today}` : `Last updated: ${today}`}
+          </p>
+        </header>
 
+        <article className="article" style={{ paddingTop: 0 }}>
           <div className="article-body">
             {lang === 'ko' ? (
               <>
-                <h2>1. 수집하는 정보</h2>
+                <h2>1. 데이터 처리 원칙 (Data Sovereignty)</h2>
                 <p>
-                  Threads Garden은 사용자로부터 어떠한 개인정보도 수집하지 않습니다.
-                  팔로워/팔로잉 텍스트 데이터는 사용자의 브라우저 내에서만 처리되며,
-                  서버로 전송되거나 저장되지 않습니다.
+                  SNS Garden은 사용자의 데이터 주권을 최우선으로 합니다. 
+                  우리의 핵심 기술적 자부심은 <strong>"서버 수집 없는 로컬 처리"</strong>입니다. 
+                  사용자가 붙여넣는 팔로워/팔로잉 데이터는 사용자의 웹 브라우저 메모리 내에서만 연산되며, 
+                  당사의 서버로 전송되거나 어떠한 형태로도 별도 저장되지 않습니다.
                 </p>
 
-                <h2>2. 쿠키 및 트래킹</h2>
+                <h2>2. 제3자 서비스 및 광고 (Google AdSense)</h2>
                 <p>
-                  본 서비스는 현재 쿠키, 로컬스토리지, 세션스토리지 등을 통해 사용자 정보를 저장하지 않습니다.
-                  향후 애드센스(Google AdSense) 광고 서비스가 추가될 경우, Google의 쿠키 정책에 따라
-                  광고 목적의 쿠키가 사용될 수 있습니다.
+                  본 서비스는 지속 가능한 운영을 위해 Google AdSense 광고를 게재할 수 있습니다. 
+                  이 과정에서 Google은 다음과 같은 방식을 사용합니다:
+                </p>
+                <ul>
+                  <li>Google 등 제3자 판매업체는 사용자의 이전 웹사이트 방문 기록을 토대로 맞춤형 광고를 게재하기 위해 쿠키를 사용합니다.</li>
+                  <li>Google의 <strong>광고 쿠키(DART 쿠키)</strong> 사용을 통해 사용자가 본 사이트 및 인터넷의 다른 사이트를 방문한 기록을 바탕으로 관련성 높은 광고를 제공할 수 있습니다.</li>
+                  <li>사용자는 <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google 광고 설정</a>을 방문하여 맞춤형 광고 게재를 중단(Opt-out)할 수 있습니다.</li>
+                </ul>
+
+                <h2>3. 방문 분석 (Analytics)</h2>
+                <p>
+                  사용자 경험 개선과 사이트 트래픽 분석을 위해 Vercel Analytics 및 Google Analytics를 사용합니다. 
+                  이 과정에서 수집되는 정보는 비식별화된 통계 정보(브라우저 유형, 접속 시간, 유입 경로 등)이며, 
+                  어떠한 개인 식별 정보도 포함하지 않습니다.
                 </p>
 
-                <h2>3. 제3자 서비스</h2>
+                <h2>4. 쿠키 및 로컬 스토리지 관리</h2>
                 <p>
-                  본 사이트는 Google AdSense 광고를 표시할 수 있습니다.
-                  Google은 사용자의 웹 활동을 기반으로 맞춤 광고를 제공하기 위해 쿠키를 사용합니다.
-                  Google의 개인정보 처리방침은 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>에서 확인하실 수 있습니다.
+                  본 사이트는 서비스의 기본 기능 수행(언어 설정 저장 등)을 위해 쿠키나 로컬 스토리지를 사용할 수 있습니다. 
+                  사용자는 브라우저 설정을 통해 쿠키 수집을 거부하거나 저장된 쿠키를 삭제할 수 있습니다. 
+                  다만, 쿠키 수집 거부 시 서비스의 일부 기능 이용에 어려움이 있을 수 있습니다.
                 </p>
 
-                <h2>4. 외부 링크</h2>
+                <h2>5. 데이터 보안</h2>
                 <p>
-                  본 서비스는 Threads 프로필 링크 등 외부 사이트로 연결되는 링크를 포함합니다.
-                  외부 사이트의 개인정보처리방침에 대해서는 책임을 지지 않습니다.
+                  모든 데이터 연산은 클라이언트 사이드(Client-side)에서 이루어지므로 물리적인 서버 데이터 유출 위험으로부터 안전합니다. 
+                  사용자가 분석을 마치고 브라우저 탭을 닫는 순간, 메모리에 로드되었던 모든 분석 데이터는 즉시 소거됩니다.
                 </p>
 
-                <h2>5. 개인정보처리방침 변경</h2>
+                <h2>6. 문의처</h2>
                 <p>
-                  본 방침은 서비스 변경에 따라 업데이트될 수 있으며,
-                  변경 시 이 페이지에 최종 수정일을 업데이트하여 고지합니다.
+                  본 개인정보 처리방침 또는 서비스 이용 중 궁금한 점이 있으시면 아래의 공식 연락처로 문의해 주시기 바랍니다.
                 </p>
-
-                <h2>6. 문의</h2>
-                <p>
-                  개인정보 관련 문의는 Threads 계정을 통해 연락해 주세요.
-                </p>
+                <div className="tool-cta" style={{ marginTop: '20px', padding: '16px' }}>
+                  <p style={{ marginBottom: 0 }}>
+                    Email: <a href="mailto:automative2099@gmail.com">automative2099@gmail.com</a>
+                  </p>
+                </div>
               </>
             ) : (
               <>
-                <h2>1. Information We Collect</h2>
+                <h2>1. Data Processing Principles (Data Sovereignty)</h2>
                 <p>
-                  Threads Garden does not collect any personal information from users.
-                  Follower/following text data is processed entirely within your browser
-                  and is never transmitted to or stored on any server.
+                  At SNS Garden, user data sovereignty is our top priority. 
+                  Our technical pride lies in <strong>"Zero-Server Local Processing."</strong> 
+                  Follower and following data pasted by users is processed exclusively within your web browser\'s RAM. 
+                  It is never transmitted to our servers or stored in any external database.
                 </p>
 
-                <h2>2. Cookies & Tracking</h2>
+                <h2>2. Third-Party Services & Advertising (Google AdSense)</h2>
                 <p>
-                  This service currently does not store any user information via cookies, localStorage, or sessionStorage.
-                  If Google AdSense advertising is added in the future, cookies may be used for advertising purposes in accordance with Google's cookie policies.
+                  To sustain our free service, we may display Google AdSense advertisements. 
+                  In this process, Google operates as follows:
+                </p>
+                <ul>
+                  <li>Third-party vendors, including Google, use cookies to serve ads based on a user\'s prior visits to your website or other websites.</li>
+                  <li>Google\'s use of <strong>advertising cookies (including the DART cookie)</strong> enables it and its partners to serve ads to users based on their visit to your sites and/or other sites on the Internet.</li>
+                  <li>Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.</li>
+                </ul>
+
+                <h2>3. Traffic Analysis (Analytics)</h2>
+                <p>
+                  We use Vercel Analytics and Google Analytics to monitor site traffic and improve user experience. 
+                  The collected data involves de-identified statistical information (e.g., browser type, visit duration, referral paths) and does not include any personally identifiable information (PII).
                 </p>
 
-                <h2>3. Third-Party Services</h2>
+                <h2>4. Cookies and Local Storage Management</h2>
                 <p>
-                  This site may display Google AdSense ads. Google uses cookies to serve personalized ads based on your web activity.
-                  Google's Privacy Policy can be found at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.
+                  This site may use cookies or local storage for basic functional purposes (such as saving language preferences). 
+                  Users can refuse the collection of cookies or delete saved cookies through their browser settings. 
+                  However, rejecting cookies may result in the limitation of certain site functionalities.
                 </p>
 
-                <h2>4. External Links</h2>
+                <h2>5. Data Security</h2>
                 <p>
-                  This service contains links to external sites such as Threads profiles.
-                  We are not responsible for the privacy practices of those external sites.
+                  Since all data computation is performed on the client side, your information is physically isolated from server-side data breach risks. 
+                  The moment you close the browser tab after analysis, all data loaded in the RAM is instantly purged.
                 </p>
 
-                <h2>5. Changes to This Policy</h2>
+                <h2>6. Contact Us</h2>
                 <p>
-                  This policy may be updated as the service evolves.
-                  Changes will be reflected by updating the "Last updated" date on this page.
+                  If you have any questions regarding this Privacy Policy or our services, please contact us via our official email.
                 </p>
-
-                <h2>6. Contact</h2>
-                <p>
-                  For privacy-related inquiries, please contact us via Threads.
-                </p>
+                <div className="tool-cta" style={{ marginTop: '20px', padding: '16px' }}>
+                  <p style={{ marginBottom: 0 }}>
+                    Email: <a href="mailto:automative2099@gmail.com">automative2099@gmail.com</a>
+                  </p>
+                </div>
               </>
             )}
           </div>
