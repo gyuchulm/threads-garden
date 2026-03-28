@@ -634,7 +634,7 @@ Reposts—especially Quote Reposts with added commentary—force extended readin
 
 The Repost is the most powerful organic growth lever on Threads. The difference between begging for Reposts and earning them naturally comes down to the quality of the content and the clarity of the format. When both are present, Reposts happen without asking.`,
     },
-    date: '2025-09-28',
+    date: '2025-09-18',
     readTime: 9,
     platform: 'threads',
   },
@@ -1343,3 +1343,208 @@ export function getPostBySlug(slug) {
 export function getAllSlugs() {
   return posts.map((p) => p.slug);
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 📝 NEW POST: The Power of First Comments (구글 애드센스 승인용 고품질 정보글)
+// ─────────────────────────────────────────────────────────────────────────────
+
+posts.push({
+  _metadata: { indexedBy: 'qwen' },
+  slug: 'the-power-of-first-comments',
+  ko: {
+    title: '첫 댓글의 힘 - 알고리즘에서 가장 과소평가된 무기를 다루는 법',
+    description: '좋은 게시물을 올렸는데 왜 반응이 없을까요? 초보자부터 고급 유저까지 놓치고 있는 "첫 댓글 전략"이 도달 범위를 결정하는 과학적 근거와 실전 적용법을 분석합니다.',
+    category: '전략',
+    content: `## 게시 후 10 분이 모든 것을 결정합니다
+
+인스타그램과 Threads 의 알고리즘은 게시물이 업로드된 직후 **초기 반응 속도**를 기반으로 배포 범위를 결정합니다. 이를 업계에서는 '인게이지먼트 윈도우(Engagement Window)'라고 부릅니다. 게시 후 약 10~30 분 안에 발생하는 댓글, 좋아요, 공유 수가 알고리즘의 초기 점수를 형성하고, 이 점수가 해당 게시물을 팔로워 외부로 얼마나 노출할지 결정합니다.
+
+연구에 따르면 게시물 업로드 후 첫 15 분이 알고리즘적 수명을 가르는 가장 중요한 시간대입니다. 이 시기에 의미 있는 상호작용이 발생하지 않으면, 게시물은 해당 계정 팔로워 내에서도 낮은 우선순위로 처리됩니다.
+
+## 첫 댓글 전략의 과학적 근거
+
+**첫 댓글 전략**은 게시물을 업로드한 직후 본인이 직접 댓글을 달아 인게이지먼트를 시작하는 방법입니다. 단순해 보이지만 심리학과 알고리즘 관점에서 강력한 효과를 가집니다.
+
+### 1. 사회적 증거 효과 (Social Proof)
+
+심리학자 로버트 치알디니의 연구에 따르면, 사람들은 타인의 행동을 보고 자신의 행동을 결정합니다. 댓글이 하나 달린 게시물은 '대화가 시작되었다'는 사회적 신호를 제공하여, 다른 사용자들이 댓글을 다는 데 심리적 장벽을 낮춥니다. 빈 댓글창보다 이미 댓글이 있는 게시물에 참여하는 것이 훨씬 자연스럽기 때문입니다.
+
+### 2. 알고리즘적 활성화 신호
+
+알고리즘은 게시물 작성자의 직접적인 참여를 '콘텐츠 품질'과 '활발한 상태'의 신호로 해석합니다. 작성자가 첫 댓글을 다는 행동은 해당 게시물이 단순한 정보 전달이 아닌 대화의 시작점임을 시스템에 알립니다.
+
+### 3. 초기 점수 버퍼 형성
+
+초기 상호작용이 빠르게 발생하면 알고리즘은 해당 게시물을 '검토 중'에서 '배포 확대 대상'으로 분류합니다. 첫 댓글은 이 전환을 가속화하는 촉매제 역할을 합니다.
+
+## 플랫폼별 첫 댓글 작성 가이드
+
+### Threads 에서 효과적인 첫 댓글
+
+Threads 는 대화형 플랫폼입니다. 게시물을 올린 직후 다음 세 가지 유형의 첫 댓글 중 하나를 선택하세요.
+
+**보충 정보 제공형:**
+"추가로, 저는 이 방법을 3 개월 동안 테스트했는데 첫 달엔 반응이 거의 없었어요. 그래도 두 번째 달부터 점진적으로 증가하기 시작했습니다."
+
+**개인 경험 공유형:**
+"저도 처음에 같은 실수를 했어요. 특히 콘텐츠 일관성을 유지하는 게 가장 어려웠는데, 주기표를 만들어서 관리하니 훨씬 수월해졌습니다."
+
+**질문 유도형 (가장 추천):**
+"이 중에서 가장 어렵게 느껴지는 게 어떤 건가요? 댓글로 여러분의 경험도 알려주세요 👇"
+
+Threads 에서 댓글 스레드가 길어질수록 알고리즘은 해당 게시물을 '논의가 활발한 콘텐츠'로 분류해 더 많이 배포합니다. 댓글 길이와 깊이가 직접적인 배포 지수로 작용합니다.
+
+### 인스타그램에서의 첫 댓글 전략
+
+인스타그램에서는 두 가지 접근법이 효과적입니다.
+
+**키워드 최적화형:**
+본문 캡션을 깔끔하게 유지하면서, 검색 최적화를 위한 태그들을 첫 댓글에 추가합니다. "해시태그 10 개를 본문이 아닌 첫 댓글에 배치하면 피드 시각적 청결성이 향상되고 검색 노출도 극대화됩니다."
+
+**릴스 요약정보형:**
+릴스를 올릴 경우, 첫 댓글에 영상 내용의 핵심 요약을 텍스트로 적어두면 검색 알고리즘이 해당 콘텐츠를 더 정확하게 분류합니다. 검색 크롤러는 비디오 내용을 읽을 수 없으므로, 텍스트 요약은 중요한 신호입니다.
+
+## 고급 유저를 위한 심화 전략
+
+### 1. 협업 계정과의 교차 댓글
+
+서로 다른 계정이 서로의 게시물에 빠르게 댓글을 달아주면, 두 계정의 팔로워 모두에게 게시물이 노출될 확률이 높아집니다. 비슷한 니치 (niche) 의 크리에이터와 '상호 지원 그룹'을 만드는 것이 중요합니다. 단, 자연스러운 상호작용이 핵심이며 과도한 인위적 조작은 역효과를 낳습니다.
+
+### 2. 데이터 기반 타이밍 최적화
+
+팔로워가 가장 활발한 시간대에 게시물을 올리고 즉시 첫 댓글을 달면 자연 반응이 가장 빠르게 붙습니다. 인스타그램 인사이트의 '팔로워 활동 시간' 데이터를 참고하여 게시 시간대를 정하고, Threads 는 평일 오전 8~10 시, 오후 7~9 시대가 일반적으로 효과적입니다.
+
+### 3. A/B 테스트를 통한 전략 검증
+
+서로 다른 첫 댓글 패턴을 A/B 테스트하세요. 예를 들어 한 주에는 질문형 댓글을, 다음 주에는 정보 보완형 댓글을 사용해 각 유형의 반응률을 측정합니다. 데이터에 기반한 최적화가 장기적인 성장을 이끕니다.
+
+## 자주 하는 실수 3 가지
+
+### 1. 과도한 해시태그 남용
+
+첫 댓글에 해시태그를 20 개 이상 추가하면 스팸으로 인식될 수 있습니다. 인스타그램에서는 5~10 개, Threads 에서는 2~3 개의 관련 태그만 사용하는 것이 적절합니다.
+
+### 2. 자동화 도구 의존
+
+댓글 달기 자동화 도구를 사용하면 계정이 제한될 위험이 큽니다. 첫 댓글은 반드시 수동으로, 게시 직후에 직접 작성해야 합니다.
+
+### 3. 일관성 없는 실행
+
+간혹만 첫 댓글 전략을 적용하면 효과가 떨어집니다. 모든 게시물에 일관되게 적용하는 것이 알고리즘 학습과 사용자 기대 형성에 중요합니다.
+
+## 요약 및 실전 체크리스트
+
+첫 댓글 전략의 핵심은 간단합니다:
+
+**게시물을 올린 즉시 → 본인 게시물에 관련성 높은 댓글 하나 달기 → 독자에게 질문하기**
+
+실전 적용을 위한 체크리스트:
+- [ ] 게시 후 10 분 이내에 첫 댓글 작성
+- [ ] 본문과 중복되지 않는 새로운 정보 추가
+- [ ] 독자의 참여를 유도하는 질문 포함
+- [ ] 플랫폼별 권장 해시태그 수 준수
+- [ ] 다음 주 반응률 측정 및 분석
+
+이 한 가지 습관만으로도 도달 범위가 의미 있게 달라집니다. 알고리즘은 대화를 사랑합니다. 그리고 모든 대화는 첫 마디에서 시작됩니다.`,
+    },
+    en: {
+      title: 'The Power of First Comments: Why the 10 Minutes After Posting Decide Everything',
+      description: 'Posted something great but saw zero traction? The "First Comment Strategy" is the most underrated algorithm lever—here is how beginners and advanced creators can use it to immediately expand reach.',
+      category: 'Strategy',
+      content: `## The 10 Minutes That Decide Everything
+
+Both Instagram and Threads use an early engagement window to determine how widely a post gets distributed. The algorithm scores your content in the first 10 to 30 minutes after upload based on comment velocity, likes, and shares. This score determines whether your post stays within your existing followers or breaks out to new audiences.
+
+Research shows that the first 15 minutes after posting is the most critical period for an article's algorithmic lifespan. If meaningful interaction doesn't occur during this window, the post will be deprioritized even among your own followers.
+
+## The Science Behind First Comments
+
+The **First Comment Strategy** involves leaving your own comment on your post immediately after publishing—before anyone else has had a chance to respond. It sounds simple, but it has powerful effects from both psychological and algorithmic perspectives.
+
+### 1. Social Proof Effect
+
+According to psychologist Robert Cialdini's research, people decide their behavior based on observing others' actions. A post with one comment signals that "a conversation has started," reducing the psychological barrier for other users to comment. It's simply easier to join an existing discussion than to be the first to break the silence.
+
+### 2. Algorithmic Activation Signal
+
+The algorithm interprets direct participation from the post author as a signal of 'content quality' and 'active status.' When the author leaves a first comment, it tells the system that this post is not just information delivery but the beginning of a conversation.
+
+### 3. Initial Score Buffer Formation
+
+When early interactions occur rapidly, the algorithm classifies the post from 'under review' to 'ready for expanded distribution.' The first comment acts as a catalyst accelerating this transition.
+
+## Platform-Specific First Comment Guidelines
+
+### Effective First Comments on Threads
+
+Threads is a conversation-first platform. Choose one of these three types of first comments immediately after posting:
+
+**Supplementary Information Type:**
+"Additionally, I tested this method for three months and saw almost no response in the first month. However, it started increasing gradually from the second month."
+
+**Personal Experience Sharing Type:**
+"I made the same mistake at first too. Maintaining content consistency was the hardest part, but creating a schedule table made it much easier."
+
+**Question-Driven Type (Most Recommended):**
+"Which of these feels most challenging to you? Share your experience in the comments 👇"
+
+On Threads, as comment threads grow longer, the algorithm classifies posts as 'highly discussed content' and distributes them more widely. Comment length and depth directly function as distribution metrics.
+
+### First Comment Strategy on Instagram
+
+Two approaches work well on Instagram:
+
+**Keyword Optimization Type:**
+Keep your caption clean while adding search-optimized tags in the first comment. "Placing 10 hashtags in the first comment rather than the caption improves feed visual cleanliness while maximizing search discoverability."
+
+**Reel Summary Information Type:**
+When posting Reels, write a text summary of key video content in the first comment. Search algorithms classify content more accurately with this information since crawlers cannot read video content directly.
+
+## Advanced Strategies for Experienced Creators
+
+### 1. Cross-Comment Partnerships
+
+When different accounts quickly comment on each other's posts, both accounts' followers have higher exposure probability. Building 'mutual support groups' with creators in similar niches is important. However, natural interaction is key; excessive artificial manipulation can backfire.
+
+### 2. Data-Driven Timing Optimization
+
+Post when your audience is most active and immediately leave a first comment for the fastest natural response. Use Instagram Insights 'Follower Activity Time' data to determine posting windows. On Threads, weekday mornings (8-10 AM) and evenings (7-9 PM) are generally most effective.
+
+### 3. A/B Testing for Strategy Validation
+
+Test different first comment patterns through A/B testing. For example, use question-type comments one week and information-completion type the next week to measure response rates for each. Data-driven optimization drives long-term growth.
+
+## Three Common Mistakes
+
+### 1. Overusing Hashtags
+
+Adding more than 20 hashtags in a first comment can trigger spam detection. Use 5-10 tags on Instagram and 2-3 relevant tags on Threads.
+
+### 2. Relying on Automation Tools
+
+Comment automation tools carry significant risk of account restrictions. First comments must always be written manually, immediately after posting.
+
+### 3. Inconsistent Execution
+
+Occasionally applying the first comment strategy produces diminished results. Consistent application across all posts is important for algorithm learning and user expectation formation.
+
+## Summary and Practical Checklist
+
+The core of the first comment strategy is simple:
+
+**Post → Immediately write a relevant comment on your own post → Ask your audience a question**
+
+Practical implementation checklist:
+- [ ] Write first comment within 10 minutes of posting
+- [ ] Add new information not duplicated in the main post
+- [ ] Include a question encouraging audience participation
+- [ ] Follow platform-recommended hashtag counts
+- [ ] Measure and analyze response rates for next week
+
+This single habit alone produces meaningful improvements in reach. The algorithm loves conversation. And every conversation starts with a first word.`,
+    },
+    date: '2026-03-28',
+    readTime: 10,
+    platform: 'general',
+  },
+]);
