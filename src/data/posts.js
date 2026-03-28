@@ -6,6 +6,7 @@
 
 export const posts = [
   {
+    _metadata: { indexedBy: 'claude' },
     slug: 'threads-unfollow-guide',
     ko: {
       title: 'Threads 언팔로우 관리: 정원 가꾸기의 첫 단계',
@@ -103,11 +104,12 @@ After a cleanup, the algorithm needs 2-3 days to recalibrate with your new netwo
 
 Once the weeds are gone, the garden has room to breathe. Use that space intentionally. Follow people you genuinely want to talk to—not to inflate a number, but to build a network that actually serves you. Repeat this process monthly, and over time, your Threads presence will start to feel like an actual community rather than a crowded, noisy lobby.`,
     },
-    date: '2025.06.15',
+    date: '2025-06-15',
     readTime: 8,
     platform: 'threads',
   },
   {
+    _metadata: { indexedBy: 'claude' },
     slug: 'threads-algorithm-2025',
     ko: {
       title: '2025 Threads 알고리즘: 노출의 법칙을 완전히 이해하다',
@@ -219,11 +221,12 @@ Your own posting is only half the equation. Leaving deeply thoughtful comments o
 
 The algorithm is ultimately a mathematical model of human attention. Understanding the logic is necessary, but the only strategy that survives long-term is making content that real people genuinely want to engage with. The tools and tactics help you be seen. What you say is what makes people stay.`,
     },
-    date: '2025.07.02',
+    date: '2025-07-02',
     readTime: 10,
     platform: 'threads',
   },
   {
+    _metadata: { indexedBy: 'claude' },
     slug: 'grow-threads-followers',
     ko: {
       title: '진짜 팔로워를 만드는 5가지 불변의 법칙',
@@ -325,12 +328,13 @@ Second, start with your existing network. Don\'t begin by trying to reach strang
 
 Growth on Threads follows an exponential curve, not a linear one. The first three months feel flat and slow. Then, as your body of work accumulates and your network compounds, growth accelerates noticeably. The single most decisive factor in whether you ever reach that inflection point is whether you keep showing up before you can see the results.`,
     },
-    date: '2025.07.20',
+    date: '2025-07-20',
     readTime: 9,
     platform: 'threads',
   },
 
   {
+    _metadata: { indexedBy: 'claude' },
     slug: 'instagram-reels-hooks',
     ko: {
       title: '3초의 마법: 릴스 조회수를 폭발시키는 후킹 공식',
@@ -424,11 +428,12 @@ Finally, add a teaser at the end. "In the next video, I\'ll go even deeper into 
 
 Improving your hook is the fastest ROI in all of content creation. Go back and watch the first two seconds of your most recent Reel right now. Does it give someone a reason to tap "See More"? If the answer is no, that\'s your answer.`,
     },
-    date: '2025.08.10',
+    date: '2025-08-10',
     readTime: 9,
     platform: 'instagram',
   },
   {
+    _metadata: { indexedBy: 'claude' },
     slug: 'sns-garden-privacy-policy',
     ko: {
       title: 'SNS Garden: 우리가 개인정보를 수집하지 않는 이유',
@@ -514,11 +519,12 @@ Operating under these constraints while keeping the service free is genuinely di
 
 If you ever encounter a follower analysis tool that asks for your password or account login, pause and consider what their business model actually is. "Free" is never truly free—the question is only what form the payment takes.`,
     },
-    date: '2025.09.05',
+    date: '2025-09-05',
     readTime: 7,
     platform: 'general',
   },
   {
+    _metadata: { indexedBy: 'claude' },
     slug: 'threads-algorithm-math',
     ko: {
       title: 'Threads 알고리즘 심화: 리포스트의 진짜 가치와 배포 범위 확장법',
@@ -628,7 +634,7 @@ Reposts—especially Quote Reposts with added commentary—force extended readin
 
 The Repost is the most powerful organic growth lever on Threads. The difference between begging for Reposts and earning them naturally comes down to the quality of the content and the clarity of the format. When both are present, Reposts happen without asking.`,
     },
-    date: '2025.09.28',
+    date: '2025-09-28',
     readTime: 9,
     platform: 'threads',
   },
@@ -636,6 +642,7 @@ The Repost is the most powerful organic growth lever on Threads. The difference 
 
 
   {
+    _metadata: { indexedBy: 'claude' },
     slug: 'instagram-grid-layout',
     ko: {
       title: '첫눈에 반하는 인스타그램 그리드 설계법',
@@ -715,11 +722,12 @@ Before posting, always check the full grid layout using a preview tool such as P
 
 A grid that takes thirty minutes per month to maintain can double your profile-to-follow conversion rate. That is one of the highest-leverage investments available to any Instagram creator.`,
     },
-    date: '2025.10.12',
+    date: '2025-10-12',
     readTime: 8,
     platform: 'instagram',
   },
   {
+    _metadata: { indexedBy: 'claude' },
     slug: 'monetize-threads-garden-guide',
     ko: {
       title: 'Threads 수익화 전략: 신뢰 자본을 수익으로 전환하는 5가지 루트',
@@ -809,11 +817,12 @@ Monetization is most natural when your audience voluntarily signals they want mo
 
 Keep promotional content below 20% of your total output. Spend 80% giving away genuine value at no cost. Your audience will only trust your paid recommendations if your free content has consistently delivered on its promise.`,
     },
-    date: '2025.11.02',
+    date: '2025-11-02',
     readTime: 9,
     platform: 'threads',
   },
   {
+    _metadata: { indexedBy: 'claude' },
     slug: 'instagram-vs-threads-brand-battle',
     ko: {
       title: '인스타 vs 쓰레드: 두 플랫폼의 심리학과 하이브리드 전략',
@@ -905,11 +914,12 @@ The most effective approach treats both platforms as two lenses on the same stor
 
 Post the finished result on Instagram. Post the struggle, the doubt, and the lesson on Threads. When someone discovers you visually on Instagram and then finds your honest process writing on Threads, they move from casual follower to genuine fan. That two-step journey—discovery on one platform, understanding on the other—is how durable audiences are built.`,
     },
-    date: '2025.12.18',
+    date: '2025-12-18',
     readTime: 9,
     platform: 'general',
   },
   {
+    _metadata: { indexedBy: 'claude' },
     slug: 'digital-hygiene-following-list',
     ko: {
       title: '팔로잉 목록이 곧 당신의 디지털 환경이다: 정기적 청소의 과학',
@@ -991,11 +1001,12 @@ Thirty minutes of quarterly maintenance changes your next ninety days of social 
 
 The digital garden analogy is not decorative: a garden you never prune will eventually become overgrown, and the plants you actually care about will struggle to receive light.`,
     },
-    date: '2026.01.12',
+    date: '2026-01-12',
     readTime: 9,
     platform: 'general',
   },
   {
+    _metadata: { indexedBy: 'claude' },
     slug: 'instagram-analytics-check',
     ko: {
       title: '데이터로 읽는 인스타그램: 계정 성장을 결정하는 5가지 핵심 지표',
@@ -1089,11 +1100,12 @@ Comments per follower ratio measures community health. Zero comments on posts wi
 
 Log these five metrics in a spreadsheet every week on the same day. Resist reacting to week-over-week fluctuations—track four-week trends instead. The data does not lie. It will tell you precisely whether your digital garden is thriving or needs a new fertilization strategy.`,
     },
-    date: '2026.02.05',
+    date: '2026-02-05',
     readTime: 10,
     platform: 'instagram',
   },
   {
+    _metadata: { indexedBy: 'claude' },
     slug: 'instagram-stories-engagement',
     ko: {
       title: '스토리로 팬덤을 만드는 법: 6가지 인터랙티브 전략과 알고리즘 활용법',
@@ -1193,9 +1205,134 @@ Reply to every DM and emoji reaction generated by your Stories, as quickly as po
 
 The compounding cycle is: Stories engagement → DM activation → Feed algorithm improvement. Building this cycle deliberately is the most sophisticated Instagram growth strategy available without paying for ads.`,
     },
-    date: '2026.03.10',
+    date: '2026-03-10',
     readTime: 10,
     platform: 'instagram',
+  },
+  {
+    _metadata: { indexedBy: 'gemini' },
+    slug: 'first-comment-algorithm-hack',
+    ko: {
+      title: '첫댓글 전략 - 알고리즘에서 가장 과소평가된 무기',
+      description: '좋은 게시물을 올렸는데 왜 반응이 없을까요? 초보자부터 고급 유저까지 놓치고 있는 "첫 댓글 전략"이 도달 범위를 결정하는 이유를 분석합니다.',
+      category: '전략',
+      content: `## 게시 후 10분이 모든 것을 결정합니다
+
+인스타그램과 Threads의 알고리즘은 게시물이 업로드된 직후 **초기 반응 속도**를 기반으로 배포 범위를 결정합니다. 이를 업계에서는 '인게이지먼트 윈도우(Engagement Window)'라고 부릅니다. 게시 후 약 10~30분 안에 발생하는 댓글, 좋아요, 공유 수가 알고리즘의 초기 점수를 형성하고, 이 점수가 해당 게시물을 팔로워 외부로 얼마나 노출할지 결정합니다.
+
+가장 흔한 실수는 좋은 게시물을 올려놓고 아무것도 하지 않는 것입니다. 좋은 씨앗을 심었어도 물을 주지 않으면 자라지 않듯, 게시물도 초기 자극이 필요합니다.
+
+## 첫 댓글 전략이란 무엇인가?
+
+**첫 댓글 전략**은 게시물을 업로드한 직후 본인이 직접 댓글을 달아 인게이지먼트를 인위적으로 시작하는 방법입니다. 단순해 보이지만, 이 행동이 알고리즘에 미치는 영향은 상당합니다.
+
+### 왜 효과적인가?
+
+알고리즘은 댓글을 '의미 있는 교류'의 신호로 해석합니다. 특히 게시물 작성자가 직접 댓글을 달면, 해당 게시물이 '활성 상태'라는 신호가 강화됩니다. 또한 이 첫 댓글이 다른 팔로워들에게 '나도 한 마디 해도 되는 공간'이라는 심리적 허락을 줍니다. 빈 댓글창보다 이미 댓글이 하나 달린 게시물에 댓글을 다는 것이 훨씬 쉽기 때문입니다.
+
+## 플랫폼별 첫 댓글 작성 방법
+
+### Threads에서의 첫 댓글
+
+Threads는 대화형 플랫폼입니다. 게시물을 올린 직후, 해당 게시물에 **보충 정보, 개인적인 경험, 또는 독자에게 던지는 질문**을 첫 댓글로 달아보세요.
+
+예시:
+- "추가로, 저는 이 방법을 3개월 동안 테스트했는데 첫 달엔 반응이 거의 없었어요. 댓글로 여러분의 경험도 알려주세요 👇"
+- "이 중에서 가장 어렵게 느껴지는 게 어떤 건가요?"
+
+이런 댓글은 대화를 유발하고, 댓글 스레드가 길어질수록 알고리즘은 해당 게시물을 '논의가 활발한 콘텐츠'로 분류해 더 많이 배포합니다.
+
+### 인스타그램에서의 첫 댓글
+
+인스타그램에서는 첫 댓글에 **핵심 키워드와 해시태그**를 추가하는 방법이 효과적입니다. 본문 캡션을 깔끔하게 유지하면서, 검색 최적화를 위한 태그들은 첫 댓글에 넣는 방식입니다. 이 방법은 피드의 시각적 청결함을 유지하면서 검색 노출을 극대화합니다.
+
+또한 릴스를 올릴 경우, 첫 댓글에 영상 내용의 핵심 요약을 텍스트로 적어두면 검색 알고리즘이 해당 콘텐츠를 더 정확하게 분류합니다.
+
+## 고급 유저를 위한 첫 댓글 심화 전략
+
+### 1. 협업 계정과의 교차 댓글
+
+서로 다른 계정이 서로의 게시물에 빠르게 댓글을 달아주면, 두 계정의 팔로워 모두에게 게시물이 노출될 확률이 높아집니다. 비슷한 니치(niche)의 크리에이터와 이런 '상호 지원 그룹'을 만드는 것이 중요합니다.
+
+### 2. 질문형 댓글로 대화 시작
+
+단순한 감탄사나 이모지보다 **구체적인 질문**이 훨씬 강력한 인게이지먼트를 만듭니다. "이 팁 중에 오늘 당장 써볼 수 있는 것은 무엇인가요?"처럼 행동을 유도하는 질문이 가장 효과적입니다.
+
+### 3. 게시 타이밍과 첫 댓글의 결합
+
+팔로워가 가장 활발한 시간대에 게시물을 올리고, 그 즉시 첫 댓글을 달면 자연 반응이 가장 빠르게 붙습니다. 인스타그램 인사이트의 '팔로워 활동 시간' 데이터를 참고하여 게시 시간대를 정하고, Threads는 평일 오전 8~10시, 오후 7~9시대가 일반적으로 효과적입니다.
+
+## 초보자를 위한 요약
+
+처음 시작하는 분들은 복잡하게 생각하지 말고 이것만 기억하세요:
+
+**게시물을 올린 즉시 → 본인 게시물에 댓글 하나 달기 → 독자에게 질문하기**
+
+이 한 가지 습관만으로도 도달 범위가 의미 있게 달라집니다. 알고리즘은 대화를 사랑합니다. 그리고 모든 대화는 첫 마디에서 시작됩니다.`,
+    },
+    en: {
+      title: 'The First Comment Hack: Why the 10 Minutes After Posting Decide Everything',
+      description: 'Posted something great but saw zero traction? The "First Comment Strategy" is the most underrated algorithm lever—here is how beginners and advanced creators can use it to immediately expand reach.',
+      category: 'Strategy',
+      content: `## The 10 Minutes That Decide Everything
+
+Both Instagram and Threads use an early engagement window to determine how widely a post gets distributed. The algorithm scores your content in the first 10 to 30 minutes after upload based on comment velocity, likes, and shares. This score determines whether your post stays within your existing followers or breaks out to new audiences.
+
+The most common mistake creators make is uploading great content and then doing nothing. A well-planted seed still needs watering. Your post needs an initial spark to activate distribution.
+
+## What is the First Comment Strategy?
+
+The First Comment Strategy is the practice of leaving your own comment on your post immediately after publishing—before anyone else has had a chance to respond. It sounds almost too simple, but its effect on algorithmic distribution is significant.
+
+### Why Does It Work?
+
+The algorithm interprets comments as signals of meaningful interaction. When the post author actively engages with their own content, it reinforces the "active" status of that post. More importantly, the presence of a first comment removes a psychological barrier for your audience. Commenting on a post that already has a reply is dramatically easier than being the first to break the silence.
+
+## Platform-Specific Execution
+
+### On Threads
+
+Threads is a conversation-first platform. Immediately after posting, add a comment that extends the conversation: supplementary information, a personal anecdote, or a direct question to your audience.
+
+Effective examples:
+- "I tested this method for three months—the first month had almost no results. What has your experience been with this? 👇"
+- "Which of these feels the hardest to actually implement?"
+
+As the comment thread deepens, the algorithm reclassifies the post as high-discussion content and pushes it further. Thread length is a direct distribution multiplier on Threads.
+
+### On Instagram
+
+On Instagram, the first comment serves two purposes simultaneously. First, place your primary hashtags and keyword tags in the first comment rather than the caption. This keeps your caption visually clean while maximizing search discoverability.
+
+Second, for Reels, writing a text summary of your video content in the first comment significantly improves how the algorithm categorizes and distributes it. Search crawlers can read text but not video—providing a text summary gives the system a clear classification signal.
+
+## Advanced Strategies for Experienced Creators
+
+### 1. Cross-Comment Partnerships
+
+Build a small group of creators in adjacent niches who agree to rapidly comment on each other's posts at launch. When two accounts' followers see mutual engagement, reach expands across both audiences simultaneously. These engagement pods work best when they are kept small, highly relevant, and genuinely interested in each other's content.
+
+### 2. Question-Driven First Comments
+
+Generic compliments and emoji reactions generate far weaker engagement chains than specific, actionable questions. "Which of these tips are you trying first today?" consistently outperforms "Great post!" as a conversation starter. The more specific the question, the more specific—and therefore more valuable—the responses become.
+
+### 3. Timing Plus First Comment as a Combined Strategy
+
+Post at the moment when your audience is most active, then immediately drop your first comment. Instagram Insights shows your follower activity by hour—use it. On Threads, weekday mornings between 8-10 AM and evenings between 7-9 PM are generally highest traffic windows.
+
+The first comment that lands during peak activity has the highest probability of triggering rapid natural responses, which then feeds the algorithm's early engagement score positively.
+
+## Summary for Beginners
+
+If you are just starting out, keep it simple. Remember only this:
+
+**Post → Immediately comment on your own post → Ask your audience one direct question**
+
+This single habit, consistently applied, produces a measurable improvement in reach. The algorithm rewards conversation. And every conversation starts with a first word.`,
+    },
+    date: '2026-03-28',
+    readTime: 9,
+    platform: 'general',
   },
 ];
 
