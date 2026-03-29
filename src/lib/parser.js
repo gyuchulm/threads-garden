@@ -12,21 +12,20 @@ export function parseSocialList(text, platform = 'instagram') {
   // 인스타그램/쓰레드 공통 버튼 리스트 (한글/영어 모두 포함)
   const buttons = ['삭제', 'Remove', '팔로잉', 'Following', '팔로우', 'Follow', '맞팔로우', 'Follow Back'];
   const dotJunk = ['·', '•'];
-  const profileJunk = ['profile picture', '님의 프로필 사진', '님의 프사'];
 
   const lines = text.split('\n').map(l => l.trim()).filter(l => l);
   const results = [];
   const seenIds = new Set();
   
-  // 아이디 패턴: 소문자, 숫자, 밑줄, 마침표로만 구성
-  const isIdPattern = (str) => /^[a-z0-9._]+$/.test(str);
+  // 아이디 패턴: 영문 대소문자, 숫자, 밑줄, 마침표 (대체적으로 소문자이나 대문자 허용 처리)
+  const isIdPattern = (str) => /^[a-zA-Z0-9._]+$/.test(str);
 
   let i = 0;
   while (i < lines.length) {
     const line = lines[i];
 
-    // 1. 아이디 패턴인지 확인
-    if (!isIdPattern(line)) {
+    // 1. 아이디 패턴인지 확인 (정크 제외)
+    if (!isIdPattern(line) || buttons.some(btn => line.toLowerCase() === btn.toLowerCase()) || dotJunk.includes(line)) {
       i++;
       continue;
     }
@@ -35,15 +34,14 @@ export function parseSocialList(text, platform = 'instagram') {
     let foundUser = false;
     let name = '';
 
-    // 2. 최대 다음 3줄 내에 '삭제'나 '팔로잉' 버튼이 있는지 확인
-    // (이 구조를 통해 nansaem 같이 아이디만 있고 버튼이 없는 가짜 유저를 필터링)
+    // 2. 최대 다음 4줄 내에 '삭제'나 '팔로잉' 버튼이 있는지 확인
     for (let j = 1; j <= 4; j++) {
       if (i + j >= lines.length) break;
       const nextLine = lines[i + j];
       const nextLineLower = nextLine.toLowerCase();
 
       // 버튼을 찾았다면 유효한 유저로 확명
-      if (buttons.some(btn => nextLineLower === btn.toLowerCase())) {
+      if (buttons.some(btn => nextLineLower.includes(btn.toLowerCase()))) {
         foundUser = true;
         
         // 아이디와 버튼 사이의 첫 번째 줄을 이름으로 채택 (없으면 아이디와 동일하게)
@@ -62,15 +60,14 @@ export function parseSocialList(text, platform = 'instagram') {
       }
 
       // 만약 버튼을 만나기 전에 다른 아이디 형식의 줄을 만나면 루프 중단 (다른 유저의 시작일 수 있음)
-      if (j > 1 && isIdPattern(nextLine) && !dotJunk.includes(lines[i + j - 1])) {
-         // 하지만 버튼 체크는 계속함 (이름이 아이디 패턴일 수 있으므로)
-      }
+      // 단, 버튼은 계속 체크해야 하므로 여기서 중단하지 않음
     }
 
     if (foundUser) {
-      if (!seenIds.has(id)) {
+      const idLower = id.toLowerCase();
+      if (!seenIds.has(idLower)) {
         results.push({ id, name: name || id });
-        seenIds.add(id);
+        seenIds.add(idLower);
       }
     } else {
       // 버튼을 못 찾았다면 유효한 유저가 아님(메타데이터 등)

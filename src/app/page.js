@@ -14,7 +14,9 @@ function parseSocialText(raw, platform) {
   const list = parseSocialList(raw, platform);
   const data = {};
   list.forEach(item => {
-    data[item.id] = item.name || item.id;
+    // 대소문자 구분 없이 매칭하기 위해 아이디를 소문자로 변환하여 키로 사용
+    const id = item.id.toLowerCase();
+    data[id] = item.name || item.id;
   });
   return data;
 }
