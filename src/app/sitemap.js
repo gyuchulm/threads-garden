@@ -9,7 +9,8 @@ export default function sitemap() {
     '',
     '/guide',
     '/tips',
-    '/privacy'
+    '/privacy',
+    '/about'
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],
@@ -19,7 +20,7 @@ export default function sitemap() {
 
   // Blog post routes
   const postRoutes = posts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
+    url: `${baseUrl}/tips/${post.slug}`,
     lastModified: (post.date || new Date().toISOString().split('T')[0]).replace(/\./g, '-'),
     changeFrequency: 'monthly',
     priority: 0.6,

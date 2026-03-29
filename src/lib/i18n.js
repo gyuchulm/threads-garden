@@ -3,7 +3,7 @@ export const translations = {
     nav: {
       guide: 'Guide',
       tips: 'Threads Tips',
-      about: '소개',
+      about: 'About',
       privacy: '개인정보처리방침',
     },
     hero: {
