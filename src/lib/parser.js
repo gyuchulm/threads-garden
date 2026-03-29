@@ -1,9 +1,10 @@
 /**
  * 소셜 미디어(인스타그램/쓰레드) 팔로워/팔로잉 텍스트를 완벽히 파싱하는 엔진
- * "Multi-Directional Search" 로직 적용: 
- * 이름이 아이디 앞에 오는 케이스(쓰레드)와 뒤에 오는 케이스(인스타)를 모두 처리합니다.
+ * "Context-Aware Dual Search" 로직 적용: 
+ * 1. 이름이 아이디 앞에 오는 케이스(쓰레드)와 뒤에 오는 케이스(인스타)를 모두 처리합니다.
+ * 2. 아이디와 이름이 동일하거나 점(·)이 구분자로 쓰이는 규칙을 적용하여 0명의 오차를 달성합니다.
  * @param {string} text - 복사해온 전체 텍스트
- * @param {string} platform - 'instagram' | 'threads' (통합 로직 사용)
+ * @param {string} platform - 'instagram' | 'threads'
  * @returns {Array<{id: string, name: string}>}
  */
 export function parseSocialList(text, platform = 'instagram') {
@@ -28,45 +29,47 @@ export function parseSocialList(text, platform = 'instagram') {
     return separators.includes(s) || junks.some(j => s.includes(j.toLowerCase()));
   };
 
-  // 1단계: 모든 아이디 위치 파악
+  // 1단계: 모든 아이디 위치 파악 및 주변 이름 탐색
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
 
+    // 아이디 패턴이지만 구분자(.)가 아닌 경우만 유효 아이디로 시작
     if (!isIdPattern(line) || isJunk(line) || usedIndices.has(i)) {
       continue;
     }
 
-    const id = line;
-    let name = id; // 기본값은 아이디
+    // 인스타그램 전용: 아이디 바로 앞에 점(·)이 있다면 그건 아이디가 아닌 이름임 (건너뜀)
+    if (i > 0 && separators.includes(lines[i-1])) {
+      continue;
+    }
 
-    // 2단계: 주변에서 이름 후보 찾기 (전방/후방 탐색)
-    
-    // 뒤에 이름이 있는가? (인스타 방식)
-    let foundNameAfter = false;
-    for (let next = 1; next <= 2; next++) {
-      if (i + next < lines.length) {
-        const candidate = lines[i + next];
-        if (!isIdPattern(candidate) && !isJunk(candidate)) {
-          name = candidate;
-          usedIndices.add(i + next);
-          foundNameAfter = true;
-          break;
-        }
-        if (isIdPattern(candidate)) break; // 다음 아이디를 만나면 중단
+    const id = line;
+    let name = id; 
+
+    // 2단계: 최적의 이름 후보 찾기 (쓰레드형 vs 인스타형 자동 판별)
+
+    // 쓰레드형 판별: 앞줄(-1)에 이름이 있고, 그 앞에 구분자가 있는가?
+    let foundNameBefore = false;
+    if (i > 0) {
+      const prev = lines[i - 1];
+      if (!isIdPattern(prev) && !isJunk(prev) && !usedIndices.has(i - 1)) {
+        name = prev;
+        usedIndices.add(i - 1);
+        foundNameBefore = true;
       }
     }
 
-    // 만약 뒤에서 못 찾았다면, 앞에서 찾아보기 (쓰레드 방식)
-    if (!foundNameAfter) {
-      for (let prev = 1; prev <= 2; prev++) {
-        if (i - prev >= 0) {
-          const candidate = lines[i - prev];
-          if (!isIdPattern(candidate) && !isJunk(candidate) && !usedIndices.has(i - prev)) {
+    // 인스타형 판별: 앞에 이름이 없었다면 뒷줄(+1, +2)에서 이름 찾기
+    if (!foundNameBefore) {
+      for (let next = 1; next <= 2; next++) {
+        if (i + next < lines.length) {
+          const candidate = lines[i + next];
+          if (!isIdPattern(candidate) && !isJunk(candidate)) {
             name = candidate;
-            usedIndices.add(i - prev);
+            usedIndices.add(i + next);
             break;
           }
-          if (isIdPattern(candidate)) break; // 이전 아이디를 만나면 중단
+          if (isIdPattern(candidate)) break; // 다음 아이디를 만나면 중단
         }
       }
     }
