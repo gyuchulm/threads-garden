@@ -7,31 +7,15 @@ import { posts } from '@/data/posts';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 
-import { parseInstagramList } from '@/lib/parser';
+import { parseSocialList } from '@/lib/parser';
 
-// ─── 파싱 (Threads/Insta 공용: 불필요한 기호 제거 및 유동적 줄 바꿈 처리) ───
+// ─── 파싱 (Threads/Insta 공용: 통합 알고리즘 사용) ───
 function parseSocialText(raw, platform) {
-  if (platform === 'instagram') {
-    const list = parseInstagramList(raw);
-    const data = {};
-    list.forEach(item => {
-      data[item.id] = item.name;
-    });
-    return data;
-  }
-
-  // Threads용 기존 로직 (또는 통합 고려)
-  const lines = raw.split('\n')
-    .map(l => l.trim())
-    .filter(l => l && !['·', '•', 'Remove', 'Follow', 'Following', '팔로우', '팔로잉'].includes(l));
-    
+  const list = parseSocialList(raw, platform);
   const data = {};
-  for (let i = 0; i < lines.length; i += 2) {
-    const rawId = lines[i];
-    const username = rawId.split('·')[0].split('•')[0].trim();
-    const description = lines[i + 1] ?? '정보 없음';
-    data[username] = description;
-  }
+  list.forEach(item => {
+    data[item.id] = item.name || item.id;
+  });
   return data;
 }
 
