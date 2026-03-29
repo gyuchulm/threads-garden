@@ -1,16 +1,19 @@
 export const dynamic = 'force-static';
 
 export default function robots() {
+  const commonDisallow = ['/private/', '/en/', '/kr/', '/ko/'];
+
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/private/', '/en/', '/kr/', '/ko/'],
+        disallow: commonDisallow,
       },
       {
         userAgent: 'Mediapartners-Google',
         allow: '/',
+        disallow: commonDisallow,
       },
     ],
     sitemap: 'https://sns-garden.com/sitemap.xml',
