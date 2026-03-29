@@ -6,7 +6,7 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/private/', '/en/', '/kr/'],
+        disallow: ['/private/', '/en/', '/kr/', '/ko/'],
       },
       {
         userAgent: 'Mediapartners-Google',
