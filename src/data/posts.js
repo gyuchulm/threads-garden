@@ -1547,4 +1547,4 @@ This single habit alone produces meaningful improvements in reach. The algorithm
     readTime: 10,
     platform: 'general',
   },
-]);
+});
