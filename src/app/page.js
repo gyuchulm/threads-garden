@@ -7,16 +7,26 @@ import { posts } from '@/data/posts';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 
+import { parseInstagramList } from '@/lib/parser';
+
 // ─── 파싱 (Threads/Insta 공용: 불필요한 기호 제거 및 유동적 줄 바꿈 처리) ───
-function parseSocialText(raw) {
+function parseSocialText(raw, platform) {
+  if (platform === 'instagram') {
+    const list = parseInstagramList(raw);
+    const data = {};
+    list.forEach(item => {
+      data[item.id] = item.name;
+    });
+    return data;
+  }
+
+  // Threads용 기존 로직 (또는 통합 고려)
   const lines = raw.split('\n')
     .map(l => l.trim())
-    .filter(l => l && !['·', '•', 'Remove', 'Follow', 'Following'].includes(l));
+    .filter(l => l && !['·', '•', 'Remove', 'Follow', 'Following', '팔로우', '팔로잉'].includes(l));
     
   const data = {};
   for (let i = 0; i < lines.length; i += 2) {
-    // 인스타그램 "아이디 · Follow" 또는 "아이디 · 팔로우" 등 가변 형태 대응
-    // 점(·)이나 불렛(•) 기준으로 앞부분만 추출
     const rawId = lines[i];
     const username = rawId.split('·')[0].split('•')[0].trim();
     const description = lines[i + 1] ?? '정보 없음';
@@ -73,8 +83,19 @@ export default function Home() {
   const ITEMS_PER_PAGE = 100;
   const tool = useCleaningAnim(isAnalyzing);
 
-  const followerCount = followersRaw.split('\n').filter(l => l.trim()).length;
-  const followingCount = followingRaw.split('\n').filter(l => l.trim()).length;
+  // 실시간 실제 카운트 계산 (인스타그램의 경우 복잡하므로 파서 활용)
+  const [followerStats, setFollowerStats] = useState(0);
+  const [followingStats, setFollowingStats] = useState(0);
+
+  useEffect(() => {
+    const fCount = Object.keys(parseSocialText(followersRaw, platform)).length;
+    setFollowerStats(fCount);
+  }, [followersRaw, platform]);
+
+  useEffect(() => {
+    const fCount = Object.keys(parseSocialText(followingRaw, platform)).length;
+    setFollowingStats(fCount);
+  }, [followingRaw, platform]);
 
   const analyze = useCallback(() => {
     setError('');
@@ -88,8 +109,8 @@ export default function Home() {
 
     // 청소 애니메이션 최소 1.4초 노출
     setTimeout(() => {
-      const followersDict = parseSocialText(followersRaw);
-      const followingDict = parseSocialText(followingRaw);
+      const followersDict = parseSocialText(followersRaw, platform);
+      const followingDict = parseSocialText(followingRaw, platform);
       const followerIds = new Set(Object.keys(followersDict));
       const followingIds = new Set(Object.keys(followingDict));
 
@@ -137,8 +158,8 @@ export default function Home() {
             <div className="input-card-header">
               <div className="input-card-icon followers">🪴</div>
               <span className="input-card-title">{t.input.followersTitle}</span>
-              {followerCount > 0 && (
-                <span className="input-card-count">{Math.ceil(followerCount / 2)}{t.input.countUnit}</span>
+              {followerStats > 0 && (
+                <span className="input-card-count">{followerStats}{t.input.countUnit}</span>
               )}
             </div>
             <textarea
@@ -152,8 +173,8 @@ export default function Home() {
             <div className="input-card-header">
               <div className="input-card-icon following">🌿</div>
               <span className="input-card-title">{t.input.followingTitle}</span>
-              {followingCount > 0 && (
-                <span className="input-card-count">{Math.ceil(followingCount / 2)}{t.input.countUnit}</span>
+              {followingStats > 0 && (
+                <span className="input-card-count">{followingStats}{t.input.countUnit}</span>
               )}
             </div>
             <textarea
