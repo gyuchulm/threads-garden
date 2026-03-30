@@ -239,6 +239,14 @@ export default function Home() {
                   <div className="result-title">
                     {t.results.title}
                     <span className="result-badge">{results.length}</span>
+                    <a
+                      href="https://buy.stripe.com/eVqbJ0bnW64Fb6t2HegrS02"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="support-nudge-btn-sm"
+                    >
+                      🌱 {lang === 'ko' ? '씨앗 심기' : 'Plant a seed'}
+                    </a>
                   </div>
                   <div className="result-actions">
                     <button className="btn-export" onClick={() => downloadCSV(results, platform)}>

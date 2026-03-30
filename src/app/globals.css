@@ -357,19 +357,41 @@ html, body {
 .support-nudge-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   color: var(--accent);
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  border: 1.5px solid var(--accent);
+  border-radius: 20px;
+  padding: 11px 28px;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+.support-nudge-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(45, 106, 79, 0.25);
+}
+
+.support-nudge-btn-sm {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--accent);
+  font-size: 12px;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
   text-decoration: none;
   border: 1px solid var(--accent);
   border-radius: 20px;
-  padding: 7px 18px;
+  padding: 4px 12px;
   transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
 }
 
-.support-nudge-btn:hover {
+.support-nudge-btn-sm:hover {
   background: var(--accent);
   color: #fff;
 }
