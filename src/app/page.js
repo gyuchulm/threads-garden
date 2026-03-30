@@ -206,7 +206,7 @@ export default function Home() {
         {/* ── Support ── */}
         <div className="bmc-row">
           <a
-            href="https://buy.stripe.com/4gM9AS77G2St5M92HegrS00"
+            href="https://buy.stripe.com/eVqbJ0bnW64Fb6t2HegrS02"
             target="_blank"
             rel="noopener noreferrer"
             className="bmc-btn"
