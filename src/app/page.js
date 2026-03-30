@@ -245,7 +245,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="support-nudge-btn-sm"
                     >
-                      🌱 {lang === 'ko' ? '씨앗 심기' : 'Plant a seed'}
+                      🌱 {lang === 'ko' ? '씨앗 심기' : 'Plant a seed'} · €5+
                     </a>
                   </div>
                   <div className="result-actions">
