@@ -211,7 +211,12 @@ export default function Home() {
             rel="noopener noreferrer"
             className="bmc-btn"
           >
-            ☕ {lang === 'ko' ? '커피 한 잔 사주기' : 'Buy me a coffee'}
+            <span className="bmc-icon">🌱</span>
+            <span className="bmc-label">
+              {lang === 'ko' ? '씨앗 심기' : 'Plant a seed'}
+            </span>
+            <span className="bmc-divider">·</span>
+            <span className="bmc-price">€5</span>
           </a>
         </div>
 
