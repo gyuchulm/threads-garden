@@ -8,7 +8,8 @@ import { Analytics } from '@vercel/analytics/react';
 export const metadata = {
   metadataBase: new URL('https://sns-garden.com'),
   title: 'Threads Garden — 맞팔 분석기 | Unfollow Finder',
-  description: '팔로워와 팔로잉을 비교해 맞팔하지 않는 계정을 찾아드립니다. Find Threads accounts that don\'t follow you back.',
+  description: '팔로워와 팔로잉을 비교해 맞팔하지 않는 계정을 찾아드립니다. Find Threads & Instagram accounts that don\'t follow you back.',
+  keywords: ['threads 맞팔', '인스타 맞팔 확인', 'threads unfollow finder', 'instagram unfollow checker', '맞팔 분석기', 'SNS 정원'],
   verification: {
     google: 'M1PA4SnZ2UMduDf15aSlzAHEzNLf6MAD1fuzO6dzhhI',
   },
@@ -18,6 +19,27 @@ export const metadata = {
       'ko-KR': 'https://sns-garden.com',
       'en-US': 'https://sns-garden.com',
     },
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://sns-garden.com',
+    title: 'SNS Garden — 맞팔 분석기 | Unfollow Finder',
+    description: '팔로워와 팔로잉을 비교해 맞팔하지 않는 계정을 찾아드립니다. Find accounts that don\'t follow you back on Threads & Instagram.',
+    siteName: 'SNS Garden',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'SNS Garden — 맞팔 분석기',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SNS Garden — 맞팔 분석기 | Unfollow Finder',
+    description: '팔로워와 팔로잉을 비교해 맞팔하지 않는 계정을 찾아드립니다.',
+    images: ['/og-image.png'],
   },
   other: {
     'google-adsense-account': 'ca-pub-4103420208538428',
