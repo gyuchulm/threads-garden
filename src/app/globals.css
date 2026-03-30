@@ -345,18 +345,24 @@ html, body {
 }
 
 .bmc-btn {
-  display: inline-block;
-  transition: transform 0.15s, opacity 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFDD00;
+  color: #000;
+  border-radius: var(--radius-sm);
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
 .bmc-btn:hover {
   transform: translateY(-2px);
-  opacity: 0.9;
-}
-
-.bmc-img {
-  height: 48px !important;
-  width: auto !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 }
 
 .description-cell {

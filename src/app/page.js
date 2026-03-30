@@ -203,19 +203,15 @@ export default function Home() {
           🔒 {t.secureNote}
         </div>
 
-        {/* ── Buy Me a Coffee ── */}
+        {/* ── Support ── */}
         <div className="bmc-row">
           <a
-            href="https://buymeacoffee.com/sns-garden"
+            href="https://buy.stripe.com/4gM9AS77G2St5M92HegrS00"
             target="_blank"
             rel="noopener noreferrer"
             className="bmc-btn"
           >
-            <img
-              src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-              alt="Buy Me A Coffee"
-              className="bmc-img"
-            />
+            ☕ {lang === 'ko' ? '커피 한 잔 사주기' : 'Buy me a coffee'}
           </a>
         </div>
 
