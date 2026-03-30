@@ -338,6 +338,27 @@ html, body {
   text-align: center;
 }
 
+.bmc-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.bmc-btn {
+  display: inline-block;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.bmc-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.bmc-img {
+  height: 48px !important;
+  width: auto !important;
+}
+
 .description-cell {
   display: flex;
   flex-direction: column;

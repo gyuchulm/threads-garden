@@ -203,6 +203,22 @@ export default function Home() {
           🔒 {t.secureNote}
         </div>
 
+        {/* ── Buy Me a Coffee ── */}
+        <div className="bmc-row">
+          <a
+            href="https://buymeacoffee.com/sns-garden"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bmc-btn"
+          >
+            <img
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+              alt="Buy Me A Coffee"
+              className="bmc-img"
+            />
+          </a>
+        </div>
+
         {/* ── Cleaning Overlay ── */}
         {isAnalyzing && (
           <div className="cleaning-banner">
