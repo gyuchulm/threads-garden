@@ -24,6 +24,8 @@ export function parseSocialList(text, platform = 'instagram') {
   
   // 아이디 패턴: 영문 대소문자, 숫자, 밑줄, 마침표
   const isIdPattern = (str) => /^[a-zA-Z0-9._]+$/.test(str);
+  // 인스타그램 ID는 항상 소문자. 대문자로 시작하면 display name일 가능성이 높음
+  const isLikelyDisplayName = (str) => /^[A-Z]/.test(str);
   const isJunkOrSeparator = (str) => {
     const s = str.toLowerCase();
     return separators.includes(s) || junks.some(j => s.includes(j.toLowerCase()));
@@ -67,8 +69,8 @@ export function parseSocialList(text, platform = 'instagram') {
           name = lines[i+2];
           usedIndices.add(i + 2);
         }
-      } else if (i + 1 < lines.length && !isIdPattern(lines[i+1]) && !isJunkOrSeparator(lines[i+1])) {
-        // 구분자 없이 바로 이름이 오는 경우
+      } else if (i + 1 < lines.length && (!isIdPattern(lines[i+1]) || isLikelyDisplayName(lines[i+1])) && !isJunkOrSeparator(lines[i+1])) {
+        // 구분자 없이 바로 이름이 오는 경우 (대문자 시작도 display name으로 처리)
         name = lines[i+1];
         usedIndices.add(i + 1);
       }
