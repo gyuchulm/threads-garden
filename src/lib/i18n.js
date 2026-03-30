@@ -56,6 +56,7 @@ export const translations = {
       empty: '팔로워와 팔로잉 목록을 모두 입력해 주세요.',
     },
     secureNote: '모든 데이터는 브라우저에서만 안전하게 처리되며 어디에도 저장되지 않습니다.',
+    seedNote: '씨앗 한 알이 이 정원을 살립니다 🌿',
     parseNote: '텍스트 복사 방식 특성상 카운트에 약간의 오차가 생길 수 있습니다.',
     tipsTeaser: {
       title: '🌿 Threads Tips',
@@ -121,6 +122,7 @@ export const translations = {
       empty: 'Please paste both Followers and Following lists.',
     },
     secureNote: 'All data is processed safely in your browser and never stored anywhere.',
+    seedNote: 'A single seed keeps this garden alive 🌿',
     parseNote: 'Due to the text-copy method, the count may have slight inaccuracies.',
     tipsTeaser: {
       title: '🌿 Threads Tips',

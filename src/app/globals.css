@@ -338,6 +338,13 @@ html, body {
   text-align: center;
 }
 
+.seed-note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
 .bmc-row {
   display: flex;
   justify-content: center;

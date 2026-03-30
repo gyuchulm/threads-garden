@@ -204,6 +204,7 @@ export default function Home() {
         </div>
 
         {/* ── Support ── */}
+        <p className="seed-note">{t.seedNote}</p>
         <div className="bmc-row">
           <a
             href="https://buy.stripe.com/eVqbJ0bnW64Fb6t2HegrS02"
