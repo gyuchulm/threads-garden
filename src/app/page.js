@@ -203,24 +203,6 @@ export default function Home() {
           🔒 {t.secureNote}
         </div>
 
-        {/* ── Support ── */}
-        <p className="seed-note">{t.seedNote}</p>
-        <div className="bmc-row">
-          <a
-            href="https://buy.stripe.com/eVqbJ0bnW64Fb6t2HegrS02"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bmc-btn"
-          >
-            <span className="bmc-icon">🌱</span>
-            <span className="bmc-label">
-              {lang === 'ko' ? '씨앗 심기' : 'Plant a seed'}
-            </span>
-            <span className="bmc-divider">·</span>
-            <span className="bmc-price">€5+</span>
-          </a>
-        </div>
-
         {/* ── Cleaning Overlay ── */}
         {isAnalyzing && (
           <div className="cleaning-banner">
@@ -312,6 +294,24 @@ export default function Home() {
                 )}
               </>
             )}
+
+            {/* ── Support nudge (결과 확인 후) ── */}
+            <div className="support-nudge">
+              <p className="support-nudge-text">
+                {lang === 'ko' ? '이 서비스가 도움이 됐다면 🌿' : 'If this was helpful 🌿'}
+              </p>
+              <a
+                href="https://buy.stripe.com/eVqbJ0bnW64Fb6t2HegrS02"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="support-nudge-btn"
+              >
+                <span>🌱</span>
+                <span>{lang === 'ko' ? '씨앗 심기' : 'Plant a seed'}</span>
+                <span className="bmc-divider">·</span>
+                <span>€5+</span>
+              </a>
+            </div>
           </div>
         )}
 
