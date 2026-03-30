@@ -41,8 +41,10 @@ export function parseSocialList(text, platform = 'instagram') {
     }
 
     // 인스타그램 정밀 규칙: 점(·) 바로 뒤에 오는 아이디 형태는 사실 '이름'임 (건너뜀)
+    // 단, 본인도 · 로 이어지는 실제 유저인 경우는 건너뛰지 않음
     if (i > 0 && (lines[i-1] === '·' || lines[i-1] === '•')) {
-      continue;
+      const nextIsDot = i + 1 < lines.length && (lines[i+1] === '·' || lines[i+1] === '•');
+      if (!nextIsDot) continue;
     }
 
     const id = line;
@@ -67,7 +69,12 @@ export function parseSocialList(text, platform = 'instagram') {
       if (i + 1 < lines.length && (lines[i+1] === '·' || lines[i+1] === '•')) {
         if (i + 2 < lines.length && !isJunkOrSeparator(lines[i+2])) {
           name = lines[i+2];
-          usedIndices.add(i + 2);
+          // 이름이 ID 패턴이고 바로 다음에도 ·가 있으면 실제 유저이므로 usedIndices에 추가하지 않음
+          const nameIsAlsoRealId = isIdPattern(lines[i+2]) && !isLikelyDisplayName(lines[i+2]) &&
+                                    i + 3 < lines.length && (lines[i+3] === '·' || lines[i+3] === '•');
+          if (!nameIsAlsoRealId) {
+            usedIndices.add(i + 2);
+          }
         }
       } else if (i + 1 < lines.length && (!isIdPattern(lines[i+1]) || isLikelyDisplayName(lines[i+1])) && !isJunkOrSeparator(lines[i+1])) {
         // 구분자 없이 바로 이름이 오는 경우 (대문자 시작도 display name으로 처리)

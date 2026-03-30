@@ -171,6 +171,9 @@ export default function Home() {
             />
           </div>
         </div>
+        <div className="security-note">
+          ⚠️ {t.parseNote}
+        </div>
 
         {/* ── Error ── */}
         {error && (
