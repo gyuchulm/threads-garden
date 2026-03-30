@@ -239,6 +239,8 @@ export default function Home() {
                   <div className="result-title">
                     {t.results.title}
                     <span className="result-badge">{results.length}</span>
+                  </div>
+                  <div className="result-header-center">
                     <a
                       href="https://buy.stripe.com/eVqbJ0bnW64Fb6t2HegrS02"
                       target="_blank"
