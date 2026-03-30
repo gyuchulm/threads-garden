@@ -348,8 +348,8 @@ html, body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: transparent;
-  color: var(--accent);
+  background: var(--accent);
+  color: #fff;
   border: 1.5px solid var(--accent);
   border-radius: var(--radius-sm);
   padding: 10px 24px;
@@ -358,13 +358,14 @@ html, body {
   font-family: 'Inter', sans-serif;
   text-decoration: none;
   transition: background 0.15s, color 0.15s, transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px rgba(45, 106, 79, 0.25);
 }
 
 .bmc-btn:hover {
-  background: var(--accent);
-  color: #fff;
+  background: transparent;
+  color: var(--accent);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(45, 106, 79, 0.25);
+  box-shadow: none;
 }
 
 .bmc-icon {

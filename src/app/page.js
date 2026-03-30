@@ -216,7 +216,7 @@ export default function Home() {
               {lang === 'ko' ? '씨앗 심기' : 'Plant a seed'}
             </span>
             <span className="bmc-divider">·</span>
-            <span className="bmc-price">€5</span>
+            <span className="bmc-price">€5+</span>
           </a>
         </div>
 
