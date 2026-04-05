@@ -14,10 +14,10 @@ export const metadata = {
     google: 'M1PA4SnZ2UMduDf15aSlzAHEzNLf6MAD1fuzO6dzhhI',
   },
   alternates: {
-    canonical: 'https://sns-garden.com',
+    canonical: 'https://sns-garden.com/',
     languages: {
-      'ko-KR': 'https://sns-garden.com',
-      'en-US': 'https://sns-garden.com',
+      'ko-KR': 'https://sns-garden.com/',
+      'en-US': 'https://sns-garden.com/',
     },
   },
   openGraph: {

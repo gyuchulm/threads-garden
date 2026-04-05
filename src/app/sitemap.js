@@ -6,21 +6,21 @@ export default function sitemap() {
 
   // Base routes
   const routes = [
-    '',
-    '/guide',
-    '/tips',
-    '/privacy',
-    '/about'
+    '/',
+    '/guide/',
+    '/tips/',
+    '/privacy/',
+    '/about/'
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],
     changeFrequency: 'weekly',
-    priority: route === '' ? 1 : 0.8,
+    priority: route === '/' ? 1 : 0.8,
   }));
 
   // Blog post routes
   const postRoutes = posts.map((post) => ({
-    url: `${baseUrl}/tips/${post.slug}`,
+    url: `${baseUrl}/tips/${post.slug}/`,
     lastModified: (post.date || new Date().toISOString().split('T')[0]).replace(/\./g, '-'),
     changeFrequency: 'monthly',
     priority: 0.6,
