@@ -15,17 +15,14 @@ export const metadata = {
   },
   alternates: {
     canonical: 'https://sns-garden.com/',
-    languages: {
-      'ko-KR': 'https://sns-garden.com/',
-      'en-US': 'https://sns-garden.com/',
-    },
   },
   openGraph: {
     type: 'website',
-    url: 'https://sns-garden.com',
+    url: 'https://sns-garden.com/',
     title: 'SNS Garden — 맞팔 분석기 | Unfollow Finder',
     description: '팔로워와 팔로잉을 비교해 맞팔하지 않는 계정을 찾아드립니다. Find accounts that don\'t follow you back on Threads & Instagram.',
     siteName: 'SNS Garden',
+    locale: 'ko_KR',
     images: [
       {
         url: '/og-image.png',
@@ -46,6 +43,20 @@ export const metadata = {
   },
 };
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'SNS Garden',
+  url: 'https://sns-garden.com/',
+  email: 'automative2099@gmail.com',
+  description: 'Threads와 Instagram 팔로워/팔로잉 데이터를 100% 브라우저에서 처리하는 무료 맞팔 분석 도구.',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer support',
+    email: 'automative2099@gmail.com',
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
@@ -53,7 +64,10 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="theme-color" content="#f8f7f4" />
-        {/* AdSense Verification - Plain HTML Tag to avoid NEXT.js attributes */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4103420208538428"
@@ -81,7 +95,6 @@ export default function RootLayout({ children }) {
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-
                     gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
                   `}
                 </Script>

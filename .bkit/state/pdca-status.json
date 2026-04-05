@@ -1,0 +1,83 @@
+{
+  "version": "3.0",
+  "lastUpdated": "2026-04-05T06:56:21.636Z",
+  "activeFeatures": [
+    "threads-garden",
+    "[slug]"
+  ],
+  "primaryFeature": "threads-garden",
+  "features": {
+    "threads-garden": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-04-05T06:55:32.176Z",
+        "lastUpdated": "2026-04-05T06:56:21.636Z"
+      },
+      "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/not-found.js"
+    },
+    "[slug]": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-04-05T06:55:55.469Z",
+        "lastUpdated": "2026-04-05T06:55:55.469Z"
+      },
+      "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/tips/[slug]/page.js"
+    }
+  },
+  "pipeline": {
+    "currentPhase": 1,
+    "level": "Dynamic",
+    "phaseHistory": []
+  },
+  "session": {
+    "startedAt": "2026-04-05T06:39:17.983Z",
+    "onboardingCompleted": false,
+    "lastActivity": "2026-04-05T06:56:21.636Z"
+  },
+  "history": [
+    {
+      "timestamp": "2026-04-05T06:55:32.176Z",
+      "feature": "threads-garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-05T06:55:55.470Z",
+      "feature": "[slug]",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-05T06:56:21.636Z",
+      "feature": "threads-garden",
+      "phase": "do",
+      "action": "updated"
+    }
+  ],
+  "stateMachine": {
+    "defaultWorkflow": "default",
+    "activeWorkflows": {},
+    "totalTransitions": 0
+  },
+  "automation": {
+    "globalLevel": 2,
+    "trustScore": 40,
+    "pendingApprovals": 0,
+    "lastGateResult": null
+  },
+  "team": {
+    "enabled": true,
+    "stateFile": ".bkit/runtime/agent-state.json",
+    "eventsFile": ".bkit/runtime/agent-events.jsonl"
+  }
+}

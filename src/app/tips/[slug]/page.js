@@ -48,7 +48,7 @@ export default function BlogPostPage({ params }) {
   const { slug } = use(params);
   const post = posts.find((p) => p.slug === slug);
 
-  const jsonLd = post ? {
+  const blogPostingJsonLd = post ? {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.ko.title,
@@ -70,15 +70,48 @@ export default function BlogPostPage({ params }) {
       '@id': `https://sns-garden.com/tips/${slug}/`,
     },
     image: 'https://sns-garden.com/og-image.png',
+    inLanguage: 'ko-KR',
+  } : null;
+
+  const breadcrumbJsonLd = post ? {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'SNS Garden',
+        item: 'https://sns-garden.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Tips',
+        item: 'https://sns-garden.com/tips/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.ko.title,
+        item: `https://sns-garden.com/tips/${slug}/`,
+      },
+    ],
   } : null;
 
   return (
     <>
-      {jsonLd && (
+      {blogPostingJsonLd && (
         <Script
           id={`json-ld-${slug}`}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
+        />
+      )}
+      {breadcrumbJsonLd && (
+        <Script
+          id={`json-ld-breadcrumb-${slug}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
       )}
       <BlogPostClient slug={slug} />
