@@ -5,6 +5,8 @@
     { "source": "/kr", "destination": "/", "permanent": true },
     { "source": "/kr/(.*)", "destination": "/$1", "permanent": true },
     { "source": "/ko", "destination": "/", "permanent": true },
-    { "source": "/ko/(.*)", "destination": "/$1", "permanent": true }
+    { "source": "/ko/(.*)", "destination": "/$1", "permanent": true },
+    { "source": "/blog", "destination": "/tips/", "permanent": true },
+    { "source": "/blog/(.*)", "destination": "/tips/$1", "permanent": true }
   ]
 }
