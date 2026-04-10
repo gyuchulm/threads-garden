@@ -62,14 +62,54 @@ export default function AboutPage() {
                   텍스트는 길지 몰라도 읽고 나면 하나라도 실행에 옮길 수 있는 내용이길 바랍니다.
                 </p>
 
+                <h2>SNS Garden 도구, 어떻게 쓰는 건가요?</h2>
+                <p>
+                  사용법은 아주 간단합니다. Threads나 인스타그램 앱에서 팔로워 목록과 팔로잉 목록을 텍스트로 복사한 뒤,
+                  SNS Garden 분석기에 붙여넣으면 됩니다. 브라우저가 두 목록을 비교해 맞팔하지 않는 계정들을 즉시 추출해줍니다.
+                  회원가입도, 로그인도, 앱 설치도 필요 없습니다.
+                </p>
+                <p>
+                  처음 써보는 분들이 가장 많이 하는 질문은 "정말 서버에 안 가나요?"입니다. 네, 정말입니다. 이 도구는 순수하게
+                  자바스크립트로 작성된 브라우저 앱이며, 외부 서버와 통신하는 코드가 없습니다. 개발자 도구 네트워크 탭으로
+                  직접 확인해보셔도 됩니다. 숨길 것이 없습니다.
+                </p>
+
+                <h2>이 사이트의 콘텐츠는 어떻게 만들어지나요?</h2>
+                <p>
+                  SNS Garden의 모든 글은 직접 SNS 계정을 운영하면서 실제로 적용해본 전략과 관찰을 바탕으로 작성됩니다.
+                  어떤 방법이 효과가 있었고, 어떤 것이 기대와 달랐는지 솔직하게 기록합니다.
+                </p>
+                <p>
+                  특히 알고리즘 관련 내용은 인스타그램과 Threads의 공식 자료, 메타 엔지니어들의 발표, 그리고 직접 실험한 데이터를
+                  종합해 작성합니다. "이렇게 하면 좋다더라"는 수준의 정보가 아니라, 왜 그렇게 작동하는지 원리를 함께 설명하려
+                  노력합니다. 그래야 플랫폼이 바뀌어도 스스로 판단할 수 있기 때문입니다.
+                </p>
+
+                <h2>앞으로 어떤 내용이 추가될 예정인가요?</h2>
+                <p>
+                  현재 준비 중인 콘텐츠는 다음과 같습니다:
+                </p>
+                <ul>
+                  <li>Threads 팔로워 분석기 기능 확장 — 계정 활동 패턴별 분류 기능</li>
+                  <li>인스타그램 스토리 조회수 분석 가이드</li>
+                  <li>소규모 계정 운영자를 위한 월별 SNS 점검 체크리스트</li>
+                  <li>플랫폼별 알고리즘 변화 모니터링 시리즈</li>
+                </ul>
+                <p>
+                  업데이트 소식을 놓치지 않으려면 북마크를 추가해두거나, 이메일로 피드백을 보내주시면 새 글이 올라올 때
+                  알림을 받을 수 있도록 방법을 안내해드리겠습니다.
+                </p>
+
                 <h2>정원사는 익명이지만, 정원은 실제입니다</h2>
                 <p>
                   SNS Garden의 운영자는 익명을 유지합니다. 하지만 이 안에 담긴 정보들은 직접 SNS를 운영하고, 실험하고,
-                  실패하고, 성장하면서 쌓아온 실제 경험에서 비롯된 것들입니다. 이름 없는 정원사가 가꾸는 이 공간이
-                  여러분의 디지털 생활에 조금이나마 도움이 되길 바랍니다.
+                  실패하고, 성장하면서 쌓아온 실제 경험에서 비롯된 것들입니다. 팔로워 수가 정체됐을 때 느꼈던 답답함,
+                  언팔로우 정리 후 피드가 달라지는 걸 처음 확인했을 때의 놀라움, 릴스 한 편이 갑자기 터졌다가 다음 편은
+                  묻혔을 때의 당혹감. 이런 경험들이 쌓여 이 사이트가 됐습니다.
                 </p>
                 <p>
-                  궁금한 점이나 피드백이 있으시면 언제든지 아래 이메일로 연락 주세요.
+                  이름 없는 정원사가 가꾸는 이 공간이 여러분의 디지털 생활에 조금이나마 도움이 되길 바랍니다. 궁금한 점이나
+                  피드백이 있으시면 언제든지 아래 이메일로 연락 주세요. 모든 메시지를 직접 읽고 답장합니다.
                 </p>
                 <div className="tool-cta" style={{ marginTop: '20px', padding: '16px' }}>
                   <p style={{ marginBottom: 0 }}>
@@ -120,14 +160,52 @@ export default function AboutPage() {
                   The posts may be long, but the goal is that you finish each one with at least one thing you can actually do today.
                 </p>
 
-                <h2>The Gardener is Anonymous. The Garden is Real.</h2>
+                <h2>How Does the SNS Garden Tool Actually Work?</h2>
                 <p>
-                  The person behind SNS Garden stays anonymous. But the content here comes from real experience—running accounts,
-                  running experiments, failing, learning, and occasionally getting something right. We hope this quiet corner of
-                  the internet makes your social media life a little cleaner and a little more intentional.
+                  The process is straightforward. Copy your follower list and following list from the Threads or Instagram app,
+                  paste them into the SNS Garden analyzer, and your browser instantly identifies which accounts aren't following
+                  you back. No signup, no login, no app installation required.
                 </p>
                 <p>
-                  If you have a question or feedback, feel free to reach out anytime.
+                  The most common question from first-time users is: "Are you sure it doesn't go to a server?" Yes, certain.
+                  This tool is a pure browser application written in JavaScript with no code that communicates with external servers.
+                  Open your browser's developer tools and check the Network tab while using it—there's nothing to hide.
+                </p>
+
+                <h2>How Is the Content Here Created?</h2>
+                <p>
+                  Every article on SNS Garden is written from direct experience managing social media accounts—strategies that
+                  worked, approaches that didn't, and observations gathered along the way.
+                </p>
+                <p>
+                  Algorithm-related content is based on official Meta documentation, statements from Instagram and Threads
+                  engineers, and personal experimentation. The goal isn't to tell you what to do—it's to explain why things
+                  work the way they do, so that when the platform changes (and it always does), you can adapt on your own.
+                </p>
+
+                <h2>What's Coming Next?</h2>
+                <p>
+                  Content currently in development includes:
+                </p>
+                <ul>
+                  <li>Expanded follower analyzer features — sorting by account activity patterns</li>
+                  <li>A complete guide to reading Instagram Stories view data</li>
+                  <li>A monthly SNS health checklist for smaller accounts</li>
+                  <li>An ongoing series tracking algorithm changes across platforms</li>
+                </ul>
+                <p>
+                  Bookmark this page or send an email to be notified when new content goes live.
+                </p>
+
+                <h2>The Gardener is Anonymous. The Garden is Real.</h2>
+                <p>
+                  The person behind SNS Garden stays anonymous. But everything here comes from real experience—the frustration
+                  of a growth plateau that wouldn't budge, the surprise of watching reach improve after a following list cleanup,
+                  the confusion of a Reel that exploded one week and disappeared the next. Those experiences built this site.
+                </p>
+                <p>
+                  We hope this corner of the internet makes your social media life a little cleaner and a little more intentional.
+                  If you have a question or feedback, reach out anytime. Every message gets a personal reply.
                 </p>
                 <div className="tool-cta" style={{ marginTop: '20px', padding: '16px' }}>
                   <p style={{ marginBottom: 0 }}>
