@@ -1,11 +1,12 @@
 {
   "version": "3.0",
-  "lastUpdated": "2026-04-13T19:26:23.202Z",
+  "lastUpdated": "2026-04-18T11:33:37.789Z",
   "activeFeatures": [
     "threads-garden",
     "[slug]",
     "data",
-    "about"
+    "about",
+    "guide"
   ],
   "primaryFeature": "threads-garden",
   "features": {
@@ -60,6 +61,19 @@
         "lastUpdated": "2026-04-10T08:12:49.899Z"
       },
       "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/about/AboutClient.js"
+    },
+    "guide": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-04-18T11:33:17.441Z",
+        "lastUpdated": "2026-04-18T11:33:37.789Z"
+      },
+      "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/guide/GuideClient.js"
     }
   },
   "pipeline": {
@@ -70,7 +84,7 @@
   "session": {
     "startedAt": "2026-04-05T06:39:17.983Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-04-13T19:26:23.202Z"
+    "lastActivity": "2026-04-18T11:33:37.789Z"
   },
   "history": [
     {
@@ -124,6 +138,18 @@
     {
       "timestamp": "2026-04-13T19:26:23.202Z",
       "feature": "threads-garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-18T11:33:17.442Z",
+      "feature": "guide",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-18T11:33:37.789Z",
+      "feature": "guide",
       "phase": "do",
       "action": "updated"
     }
