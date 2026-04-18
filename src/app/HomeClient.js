@@ -360,6 +360,10 @@ export default function Home() {
                 <li><strong>Threads + 인스타그램 지원</strong> — 두 플랫폼 모두 분석할 수 있습니다.</li>
                 <li><strong>CSV 내보내기</strong> — 비맞팔 계정 목록을 파일로 저장해 관리할 수 있습니다.</li>
               </ul>
+              <p>
+                처음 사용하신다면 <Link href="/guide">이용 가이드</Link>를 먼저 읽어보세요.
+                더 자세한 SNS 성장 전략은 <Link href="/tips">Tips 섹션</Link>에서 확인할 수 있습니다.
+              </p>
             </>
           ) : (
             <>
@@ -395,6 +399,10 @@ export default function Home() {
                 <li><strong>Threads + Instagram</strong> — Switch between platforms with one click.</li>
                 <li><strong>CSV export</strong> — Download your non-follower list for offline review.</li>
               </ul>
+              <p>
+                New to SNS Garden? Read the <Link href="/guide">How-to Guide</Link> to get started.
+                For deeper growth strategies, explore the <Link href="/tips">Tips section</Link>.
+              </p>
             </>
           )}
         </section>

@@ -111,6 +111,10 @@ export default function AboutPage() {
                   이름 없는 정원사가 가꾸는 이 공간이 여러분의 디지털 생활에 조금이나마 도움이 되길 바랍니다. 궁금한 점이나
                   피드백이 있으시면 언제든지 아래 이메일로 연락 주세요. 모든 메시지를 직접 읽고 답장합니다.
                 </p>
+                <p>
+                  도구 사용법이 궁금하다면 <Link href="/guide">이용 가이드</Link>를,
+                  SNS 성장 전략이 필요하다면 <Link href="/tips">Tips 섹션</Link>을 방문해주세요.
+                </p>
                 <div className="tool-cta" style={{ marginTop: '20px', padding: '16px' }}>
                   <p style={{ marginBottom: 0 }}>
                     📬 Email: <a href="mailto:automative2099@gmail.com">automative2099@gmail.com</a>
@@ -206,6 +210,10 @@ export default function AboutPage() {
                 <p>
                   We hope this corner of the internet makes your social media life a little cleaner and a little more intentional.
                   If you have a question or feedback, reach out anytime. Every message gets a personal reply.
+                </p>
+                <p>
+                  Ready to get started? Visit the <Link href="/guide">How-to Guide</Link> or browse
+                  the <Link href="/tips">Tips section</Link> for growth strategies.
                 </p>
                 <div className="tool-cta" style={{ marginTop: '20px', padding: '16px' }}>
                   <p style={{ marginBottom: 0 }}>
