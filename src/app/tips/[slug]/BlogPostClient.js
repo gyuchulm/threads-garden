@@ -4,6 +4,22 @@ import { useLang } from '@/context/LangContext';
 import { getPostBySlug } from '@/data/posts';
 import Footer from '@/components/Footer';
 
+function inlineFormat(str) {
+  return str
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+}
+
+function parseTable(lines) {
+  // Lines: header row, separator row (|---|---|), body rows
+  const headerCells = lines[0].split('|').map(s => s.trim()).filter(Boolean);
+  const bodyRows = lines.slice(2).map(line =>
+    line.split('|').map(s => s.trim()).filter((_, idx, arr) => idx > 0 || line.trim().startsWith('|') === false ? true : true)
+      .filter(Boolean)
+  );
+  return { headerCells, bodyRows };
+}
+
 function renderContent(text) {
   const blocks = text.trim().split(/\n\n+/);
   return blocks.map((block, i) => {
@@ -14,19 +30,53 @@ function renderContent(text) {
       return <h3 key={i}>{block.slice(4)}</h3>;
     }
     const lines = block.split('\n');
+
+    // Markdown table detection: requires header row, separator row with dashes, and body rows
+    if (
+      lines.length >= 2 &&
+      lines[0].trim().startsWith('|') &&
+      /^\s*\|[\s|:-]+\|\s*$/.test(lines[1])
+    ) {
+      const headerCells = lines[0].split('|').slice(1, -1).map(s => s.trim());
+      const bodyRows = lines.slice(2)
+        .filter(l => l.trim().startsWith('|'))
+        .map(l => l.split('|').slice(1, -1).map(s => s.trim()));
+      return (
+        <div key={i} className="table-wrapper" style={{ margin: '20px 0' }}>
+          <table className="content-table">
+            <thead>
+              <tr>
+                {headerCells.map((h, j) => (
+                  <th key={j} dangerouslySetInnerHTML={{ __html: inlineFormat(h) }} />
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {bodyRows.map((row, r) => (
+                <tr key={r}>
+                  {row.map((cell, c) => (
+                    <td key={c} dangerouslySetInnerHTML={{ __html: inlineFormat(cell) }} />
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+
     if (lines.length > 1 && lines.every(l => /^[-✅❌•]/.test(l.trim()))) {
       return (
         <ul key={i}>
           {lines.map((l, j) => (
             <li key={j} dangerouslySetInnerHTML={{
-              __html: l.replace(/^[-✅❌•]\s*/, '').replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+              __html: inlineFormat(l.replace(/^[-✅❌•]\s*/, ''))
             }} />
           ))}
         </ul>
       );
     }
-    const html = block.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    return <p key={i} dangerouslySetInnerHTML={{ __html: html }} />;
+    return <p key={i} dangerouslySetInnerHTML={{ __html: inlineFormat(block) }} />;
   });
 }
 
