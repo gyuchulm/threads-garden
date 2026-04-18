@@ -858,6 +858,84 @@ html, body {
   text-decoration: none;
 }
 
+/* ─── Home About Section ─── */
+.home-about-section {
+  padding: 52px 0 40px;
+  border-top: 1px solid var(--border-light);
+  margin-top: 40px;
+}
+
+.home-about-section h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: var(--text-primary);
+}
+
+.home-about-section p {
+  font-size: 0.97rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  max-width: 680px;
+}
+
+.home-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: grid;
+  gap: 10px;
+}
+
+.home-feature-list li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.home-feature-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ─── Tips Intro ─── */
+.tips-intro {
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.tips-intro p {
+  font-size: 0.97rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  max-width: 720px;
+}
+
+.tips-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.tips-cat-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+}
+
 /* ─── Recent Tips Section on Home ─── */
 .home-tips-section {
   padding: 60px 0;

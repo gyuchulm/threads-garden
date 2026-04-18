@@ -325,6 +325,80 @@ export default function Home() {
           </div>
         )}
 
+        {/* ── About Section ── */}
+        <section className="home-about-section">
+          {lang === 'ko' ? (
+            <>
+              <h2>SNS Garden이란 무엇인가요?</h2>
+              <p>
+                SNS Garden은 Threads와 인스타그램의 팔로워·팔로잉 목록을 비교해 맞팔하지 않는 계정을 즉시 찾아주는
+                무료 분석 도구입니다. 회원가입도, 앱 설치도, 로그인도 필요 없습니다. 복사한 텍스트를 붙여넣는 것만으로
+                수백, 수천 명의 목록을 수 초 안에 분석합니다.
+              </p>
+              <p>
+                모든 데이터는 여러분의 브라우저 안에서만 처리됩니다. 어떤 서버에도 저장되지 않으며,
+                탭을 닫는 순간 완전히 삭제됩니다. 개인 정보 보호를 최우선으로 설계된 도구입니다.
+              </p>
+
+              <h2>왜 팔로잉 목록을 정리해야 할까요?</h2>
+              <p>
+                Threads와 인스타그램 알고리즘은 내가 팔로우하는 계정들의 활동 상태를 분석해 피드 구성에 반영합니다.
+                활동하지 않는 유령 계정, 콘텐츠와 무관한 계정들이 팔로잉 목록에 쌓일수록 알고리즘이 내 계정에
+                부여하는 네트워크 신호 품질이 낮아집니다. 이것은 게시물 도달 범위에 직접적인 영향을 줍니다.
+              </p>
+              <p>
+                반대로 팔로잉 목록을 정기적으로 정리하면 피드 품질이 높아지고, 진짜 관심 있는 콘텐츠가
+                더 많이 노출되며, 내 게시물의 알고리즘 반응률도 점진적으로 개선됩니다.
+                단순한 숫자 줄이기가 아니라 디지털 공간을 건강하게 유지하는 습관입니다.
+              </p>
+
+              <h2>SNS Garden의 특징</h2>
+              <ul className="home-feature-list">
+                <li><strong>완전 무료</strong> — 모든 기능을 제한 없이 무료로 이용할 수 있습니다.</li>
+                <li><strong>100% 브라우저 처리</strong> — 데이터가 서버를 경유하지 않아 개인정보 유출 위험이 없습니다.</li>
+                <li><strong>설치 불필요</strong> — 앱 설치나 계정 연동 없이 웹에서 바로 사용합니다.</li>
+                <li><strong>Threads + 인스타그램 지원</strong> — 두 플랫폼 모두 분석할 수 있습니다.</li>
+                <li><strong>CSV 내보내기</strong> — 비맞팔 계정 목록을 파일로 저장해 관리할 수 있습니다.</li>
+              </ul>
+            </>
+          ) : (
+            <>
+              <h2>What is SNS Garden?</h2>
+              <p>
+                SNS Garden is a free browser-based tool that compares your followers and following lists on Threads
+                and Instagram to instantly identify accounts that don't follow you back. No signup, no app installation,
+                no login required. Paste your copied lists and get results in seconds.
+              </p>
+              <p>
+                Everything is processed entirely inside your browser. Nothing is stored on any server, and all data
+                disappears the moment you close the tab. Privacy-first by design.
+              </p>
+
+              <h2>Why Clean Your Following List?</h2>
+              <p>
+                The Threads and Instagram algorithms factor in the activity patterns of accounts you follow when
+                shaping your feed and distributing your posts. A following list full of inactive accounts or
+                irrelevant profiles weakens the network quality signals your account sends to the algorithm —
+                which directly reduces how widely your posts are seen.
+              </p>
+              <p>
+                Regular audits of your following list improve feed quality, surface content you actually care about,
+                and gradually improve how the algorithm responds to your posts. It's not about chasing numbers —
+                it's about maintaining a healthy digital space.
+              </p>
+
+              <h2>What Makes SNS Garden Different</h2>
+              <ul className="home-feature-list">
+                <li><strong>Completely free</strong> — No paywalls, no limits on any feature.</li>
+                <li><strong>100% browser-processed</strong> — Your data never leaves your device.</li>
+                <li><strong>No installation</strong> — No app, no account connection. Works in any browser.</li>
+                <li><strong>Threads + Instagram</strong> — Switch between platforms with one click.</li>
+                <li><strong>CSV export</strong> — Download your non-follower list for offline review.</li>
+              </ul>
+            </>
+          )}
+        </section>
+
         {/* ── Recent Tips Grid ── */}
         <section className="home-tips-section">
           <div className="section-header">
