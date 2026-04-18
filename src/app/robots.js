@@ -1,7 +1,11 @@
 export const dynamic = 'force-static';
 
 export default function robots() {
-  const commonDisallow = ['/private/', '/en/', '/kr/', '/ko/'];
+  // NOTE: /en/, /ko/, /kr/ are NOT disallowed.
+  // They are 301-redirected to / via vercel.json.
+  // Blocking them in robots.txt prevents crawlers from following the redirect,
+  // causing Search Console to report "blocked by robots.txt" errors.
+  const commonDisallow = ['/private/'];
 
   return {
     rules: [
