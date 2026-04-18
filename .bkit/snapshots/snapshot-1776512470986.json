@@ -1,0 +1,209 @@
+{
+  "timestamp": "2026-04-18T11:41:10.985Z",
+  "reason": "compaction",
+  "status": {
+    "version": "3.0",
+    "lastUpdated": "2026-04-18T11:40:24.915Z",
+    "activeFeatures": [
+      "threads-garden",
+      "[slug]",
+      "data",
+      "about",
+      "guide",
+      "tips"
+    ],
+    "primaryFeature": "threads-garden",
+    "features": {
+      "threads-garden": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-05T06:55:32.176Z",
+          "lastUpdated": "2026-04-18T11:37:51.457Z"
+        },
+        "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/HomeClient.js"
+      },
+      "[slug]": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-05T06:55:55.469Z",
+          "lastUpdated": "2026-04-18T11:40:24.915Z"
+        },
+        "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/tips/[slug]/BlogPostClient.js"
+      },
+      "data": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-10T08:02:37.237Z",
+          "lastUpdated": "2026-04-10T08:06:13.158Z"
+        },
+        "lastFile": "/Users/gyuchulmoon/threads-garden/src/data/posts.js"
+      },
+      "about": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-10T08:12:32.649Z",
+          "lastUpdated": "2026-04-10T08:12:49.899Z"
+        },
+        "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/about/AboutClient.js"
+      },
+      "guide": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-18T11:33:17.441Z",
+          "lastUpdated": "2026-04-18T11:33:37.789Z"
+        },
+        "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/guide/GuideClient.js"
+      },
+      "tips": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-18T11:38:05.770Z",
+          "lastUpdated": "2026-04-18T11:38:05.770Z"
+        },
+        "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/tips/TipsClient.js"
+      }
+    },
+    "pipeline": {
+      "currentPhase": 1,
+      "level": "Dynamic",
+      "phaseHistory": []
+    },
+    "session": {
+      "startedAt": "2026-04-05T06:39:17.983Z",
+      "onboardingCompleted": false,
+      "lastActivity": "2026-04-18T11:40:24.915Z"
+    },
+    "history": [
+      {
+        "timestamp": "2026-04-05T06:55:32.176Z",
+        "feature": "threads-garden",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-05T06:55:55.470Z",
+        "feature": "[slug]",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-05T06:56:21.636Z",
+        "feature": "threads-garden",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-10T08:02:37.237Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-10T08:05:41.325Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-10T08:06:13.158Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-10T08:12:32.649Z",
+        "feature": "about",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-10T08:12:49.900Z",
+        "feature": "about",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-13T19:26:23.202Z",
+        "feature": "threads-garden",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-18T11:33:17.442Z",
+        "feature": "guide",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-18T11:33:37.789Z",
+        "feature": "guide",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-18T11:37:51.458Z",
+        "feature": "threads-garden",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-18T11:38:05.770Z",
+        "feature": "tips",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-18T11:40:24.915Z",
+        "feature": "[slug]",
+        "phase": "do",
+        "action": "updated"
+      }
+    ],
+    "stateMachine": {
+      "defaultWorkflow": "default",
+      "activeWorkflows": {},
+      "totalTransitions": 0
+    },
+    "automation": {
+      "globalLevel": 2,
+      "trustScore": 40,
+      "pendingApprovals": 0,
+      "lastGateResult": null
+    },
+    "team": {
+      "enabled": true,
+      "stateFile": ".bkit/runtime/agent-state.json",
+      "eventsFile": ".bkit/runtime/agent-events.jsonl"
+    }
+  }
+}

@@ -1,12 +1,13 @@
 {
   "version": "3.0",
-  "lastUpdated": "2026-04-18T11:33:37.789Z",
+  "lastUpdated": "2026-04-18T11:52:06.122Z",
   "activeFeatures": [
     "threads-garden",
     "[slug]",
     "data",
     "about",
-    "guide"
+    "guide",
+    "tips"
   ],
   "primaryFeature": "threads-garden",
   "features": {
@@ -19,9 +20,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-04-05T06:55:32.176Z",
-        "lastUpdated": "2026-04-13T19:26:23.201Z"
+        "lastUpdated": "2026-04-18T11:52:06.121Z"
       },
-      "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/layout.js"
+      "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/robots.js"
     },
     "[slug]": {
       "phase": "do",
@@ -32,9 +33,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-04-05T06:55:55.469Z",
-        "lastUpdated": "2026-04-05T06:55:55.469Z"
+        "lastUpdated": "2026-04-18T11:40:24.915Z"
       },
-      "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/tips/[slug]/page.js"
+      "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/tips/[slug]/BlogPostClient.js"
     },
     "data": {
       "phase": "do",
@@ -74,6 +75,19 @@
         "lastUpdated": "2026-04-18T11:33:37.789Z"
       },
       "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/guide/GuideClient.js"
+    },
+    "tips": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-04-18T11:38:05.770Z",
+        "lastUpdated": "2026-04-18T11:38:05.770Z"
+      },
+      "lastFile": "/Users/gyuchulmoon/threads-garden/src/app/tips/TipsClient.js"
     }
   },
   "pipeline": {
@@ -84,7 +98,7 @@
   "session": {
     "startedAt": "2026-04-05T06:39:17.983Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-04-18T11:33:37.789Z"
+    "lastActivity": "2026-04-18T11:52:06.122Z"
   },
   "history": [
     {
@@ -150,6 +164,30 @@
     {
       "timestamp": "2026-04-18T11:33:37.789Z",
       "feature": "guide",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-18T11:37:51.458Z",
+      "feature": "threads-garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-18T11:38:05.770Z",
+      "feature": "tips",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-18T11:40:24.915Z",
+      "feature": "[slug]",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-18T11:52:06.122Z",
+      "feature": "threads-garden",
       "phase": "do",
       "action": "updated"
     }
