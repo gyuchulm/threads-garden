@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useLang } from '@/context/LangContext';
-import { getPostBySlug } from '@/data/posts';
+import { getPostBySlug, posts } from '@/data/posts';
 import Footer from '@/components/Footer';
 
 function inlineFormat(str) {
@@ -80,6 +80,12 @@ function renderContent(text) {
   });
 }
 
+function getRelatedPosts(currentSlug, platform, count = 3) {
+  const samePlatform = posts.filter(p => p.slug !== currentSlug && p.platform === platform);
+  const others = posts.filter(p => p.slug !== currentSlug && p.platform !== platform);
+  return [...samePlatform, ...others].slice(0, count);
+}
+
 export default function BlogPostClient({ slug }) {
   const { lang, t } = useLang();
   const post = getPostBySlug(slug);
@@ -98,13 +104,19 @@ export default function BlogPostClient({ slug }) {
   }
 
   const content = post[lang] ?? post.ko;
+  const relatedPosts = getRelatedPosts(slug, post.platform);
 
   return (
     <main>
       <div className="container">
-        <Link href="/tips" className="back-link">
-          ← Threads Tips
-        </Link>
+        {/* HTML Breadcrumb — crawlable by Google */}
+        <nav className="breadcrumb" aria-label="breadcrumb">
+          <Link href="/">SNS Garden</Link>
+          <span className="breadcrumb-sep">›</span>
+          <Link href="/tips/">{lang === 'ko' ? '팁 & 가이드' : 'Tips'}</Link>
+          <span className="breadcrumb-sep">›</span>
+          <span>{content.title}</span>
+        </nav>
 
         <article className="article">
           <div className="post-meta">
@@ -127,6 +139,27 @@ export default function BlogPostClient({ slug }) {
             </Link>
           </div>
         </div>
+
+        {/* Related Posts — internal link network for SEO */}
+        {relatedPosts.length > 0 && (
+          <section className="related-posts">
+            <h2 className="related-posts-title">
+              {lang === 'ko' ? '관련 아티클' : 'Related Articles'}
+            </h2>
+            <div className="related-posts-grid">
+              {relatedPosts.map(rp => {
+                const rc = rp[lang] ?? rp.ko;
+                return (
+                  <Link href={`/tips/${rp.slug}/`} key={rp.slug} className="related-post-card">
+                    <span className="related-post-category">{rc.category}</span>
+                    <span className="related-post-title">{rc.title}</span>
+                    <span className="related-post-meta">{rp.date} · {rp.readTime}{lang === 'ko' ? '분' : ' min'}</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        )}
 
         <Footer />
       </div>
