@@ -86,6 +86,14 @@ function getRelatedPosts(currentSlug, platform, count = 3) {
   return [...samePlatform, ...others].slice(0, count);
 }
 
+function getPrevNext(currentSlug) {
+  const idx = posts.findIndex(p => p.slug === currentSlug);
+  return {
+    prev: idx > 0 ? posts[idx - 1] : null,
+    next: idx < posts.length - 1 ? posts[idx + 1] : null,
+  };
+}
+
 export default function BlogPostClient({ slug }) {
   const { lang, t } = useLang();
   const post = getPostBySlug(slug);
@@ -105,6 +113,7 @@ export default function BlogPostClient({ slug }) {
 
   const content = post[lang] ?? post.ko;
   const relatedPosts = getRelatedPosts(slug, post.platform);
+  const { prev, next } = getPrevNext(slug);
 
   return (
     <main>
@@ -139,6 +148,24 @@ export default function BlogPostClient({ slug }) {
             </Link>
           </div>
         </div>
+
+        {/* Prev / Next navigation */}
+        {(prev || next) && (
+          <nav className="post-nav" aria-label="post navigation">
+            {prev ? (
+              <Link href={`/tips/${prev.slug}/`} className="post-nav-item post-nav-prev">
+                <span className="post-nav-label">← {lang === 'ko' ? '이전 글' : 'Previous'}</span>
+                <span className="post-nav-title">{(prev[lang] ?? prev.ko).title}</span>
+              </Link>
+            ) : <span />}
+            {next ? (
+              <Link href={`/tips/${next.slug}/`} className="post-nav-item post-nav-next">
+                <span className="post-nav-label">{lang === 'ko' ? '다음 글' : 'Next'} →</span>
+                <span className="post-nav-title">{(next[lang] ?? next.ko).title}</span>
+              </Link>
+            ) : <span />}
+          </nav>
+        )}
 
         {/* Related Posts — internal link network for SEO */}
         {relatedPosts.length > 0 && (
