@@ -7,20 +7,25 @@ import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   metadataBase: new URL('https://sns-garden.com'),
-  title: 'Threads Garden — 맞팔 분석기 | Unfollow Finder',
-  description: '팔로워와 팔로잉을 비교해 맞팔하지 않는 계정을 찾아드립니다. Find Threads & Instagram accounts that don\'t follow you back.',
-  keywords: ['threads 맞팔', '인스타 맞팔 확인', 'threads unfollow finder', 'instagram unfollow checker', '맞팔 분석기', 'SNS 정원'],
+  title: 'SNS Garden — 브라우저에서 돌아가는 맞팔 분석 도구',
+  description: '팔로워·팔로잉 목록을 내 브라우저 안에서만 비교해 맞팔 여부를 분석해 드리는 무료 도구. 회원가입·API 연동·서버 저장 없이 사용할 수 있습니다.',
+  keywords: ['맞팔 분석', '맞팔 확인', 'threads 맞팔', '인스타 맞팔', 'unfollow analysis', 'follower analysis', 'SNS Garden'],
   verification: {
     google: 'M1PA4SnZ2UMduDf15aSlzAHEzNLf6MAD1fuzO6dzhhI',
   },
   alternates: {
     canonical: 'https://sns-garden.com/',
+    languages: {
+      'ko-KR': 'https://sns-garden.com/',
+      'en-US': 'https://sns-garden.com/',
+      'x-default': 'https://sns-garden.com/',
+    },
   },
   openGraph: {
     type: 'website',
     url: 'https://sns-garden.com/',
-    title: 'SNS Garden — 맞팔 분석기 | Unfollow Finder',
-    description: '팔로워와 팔로잉을 비교해 맞팔하지 않는 계정을 찾아드립니다. Find accounts that don\'t follow you back on Threads & Instagram.',
+    title: 'SNS Garden — 브라우저에서 돌아가는 맞팔 분석 도구',
+    description: '팔로워와 팔로잉을 브라우저 안에서만 비교 분석하는 무료 도구. Analyze mutual-follow status entirely inside your browser.',
     siteName: 'SNS Garden',
     locale: 'ko_KR',
     images: [
@@ -28,14 +33,14 @@ export const metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'SNS Garden — 맞팔 분석기',
+        alt: 'SNS Garden — 맞팔 분석 도구',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SNS Garden — 맞팔 분석기 | Unfollow Finder',
-    description: '팔로워와 팔로잉을 비교해 맞팔하지 않는 계정을 찾아드립니다.',
+    title: 'SNS Garden — 맞팔 분석 도구',
+    description: '브라우저 안에서만 동작하는 맞팔 분석기. 서버 저장 없음.',
     images: ['/og-image.png'],
   },
   other: {
@@ -64,6 +69,34 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="theme-color" content="#f8f7f4" />
+        {/* Google Consent Mode v2 — default to denied for EU/EEA/UK, update() is handled by AdSense Privacy & messaging (CMP) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                analytics_storage: 'denied',
+                functionality_storage: 'granted',
+                security_storage: 'granted',
+                wait_for_update: 500,
+                region: ['EU','EEA','GB','CH','NO','IS','LI']
+              });
+              gtag('consent', 'default', {
+                ad_storage: 'granted',
+                ad_user_data: 'granted',
+                ad_personalization: 'granted',
+                analytics_storage: 'granted',
+                functionality_storage: 'granted',
+                security_storage: 'granted'
+              });
+              gtag('set', 'ads_data_redaction', true);
+            `,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

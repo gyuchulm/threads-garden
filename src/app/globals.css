@@ -94,6 +94,19 @@ html, body {
   margin: 0 auto;
 }
 
+.header .hero-lede {
+  color: var(--text-secondary);
+  font-size: 14.5px;
+  line-height: 1.7;
+  max-width: 680px;
+  margin: 16px auto 0;
+  text-align: left;
+  padding: 14px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
 /* ─── Guide Steps ─── */
 .guide {
   display: flex;

@@ -10,6 +10,7 @@ export default function sitemap() {
     '/guide/',
     '/tips/',
     '/privacy/',
+    '/terms/',
     '/about/'
   ].map((route) => ({
     url: `${baseUrl}${route}`,

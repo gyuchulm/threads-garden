@@ -123,6 +123,11 @@ export default function Home() {
           </div>
           <h1>{t.hero.title} <span>{platform === 'threads' ? 'Threads' : 'Instagram'} Garden</span></h1>
           <p>{t.hero.desc}</p>
+          <p className="hero-lede">
+            {lang === 'ko'
+              ? 'SNS Garden은 여러분이 직접 복사한 팔로워·팔로잉 텍스트를 오직 브라우저 안에서 비교 분석하여 상호 팔로우가 성립되지 않은 계정을 시각적으로 보여주는 무료 분석 도구입니다. 서버 저장, API 연동, 자동 언팔로우 기능은 일절 제공하지 않으며, 최종 조치 여부는 사용자가 직접 각 플랫폼 앱에서 판단·수행합니다.'
+              : 'SNS Garden is a free analysis tool that compares the follower and following text you paste — entirely inside your browser — and surfaces accounts that don\'t follow you back. It never stores data on a server, does not integrate with any platform API, and never performs automated unfollowing: all final actions are taken by you, manually, inside the official app.'}
+          </p>
         </header>
 
         {/* ── Guide ── */}
